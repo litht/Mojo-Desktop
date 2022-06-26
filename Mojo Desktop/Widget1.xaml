@@ -15,9 +15,13 @@
                                  IsBackButtonVisible="Collapsed"
                                  >
                 <muxc:NavigationView.MenuItems>
-                    <muxc:NavigationViewItem Icon="viewall" Content="自定义指令" Tag="Custom" />
-                    <muxc:NavigationViewItem Icon="viewall" Content="Menu Item2" Tag="Custom" />
-                    <muxc:NavigationViewItem Icon="viewall" Content="Menu Item3" Tag="Custom" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="常用指令" Tag="Custom" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="角色" Tag="Char" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="武器" Tag="Weapon" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="圣遗物" Tag="Art" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="生物" Tag="Spawn" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="任务" Tag="Custom" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="物品" Tag="Custom" />
                     <muxc:NavigationViewItem Icon="viewall" Content="Menu Item4" Tag="Custom" />
                 </muxc:NavigationView.MenuItems>
                 <Grid>
@@ -26,9 +30,26 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <Frame x:Name="contentFrame"/>
-                    <TextBox Name="commandInput" Grid.Row="1" Margin="20 5">
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Margin="10 0 0 0" CornerRadius="6" Width="12" Height="12" Background="LightGray">
+                            
+                        </Border>
                         
-                    </TextBox>
+                        <TextBox Grid.Column="1" Name="commandInput"  Height="24" Margin="10 5">
+
+                        </TextBox>
+
+                        <Button Grid.Column="2" Style="{StaticResource AccentButtonStyle}" Margin="10" Padding="30 5"
+                    Click="Button_Click">
+                            发送
+                        </Button>
+                    </Grid>
                     <muxc:TeachingTip x:Name="commandResultTip"
 	                    Title="执行结果"
 	                    PreferredPlacement="Auto"

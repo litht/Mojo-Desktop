@@ -74,5 +74,10 @@ namespace Mojo_Desktop
             Type pageType = Type.GetType(pageName);
             contentFrame.Navigate(pageType);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

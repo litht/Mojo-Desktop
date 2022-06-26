@@ -51,6 +51,10 @@ namespace Mojo_Desktop
 
         public const string Language = "zh-cn";
 
-
+        public class SimpleItem
+        {
+            public string Name { get; set; }
+            public string Id { get; set; }
+        }
     }
 }

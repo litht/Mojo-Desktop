@@ -56,7 +56,7 @@ namespace Mojo_Desktop.Pages
             vm.Commands = new ObservableCollection<item>();
             for (int i = 0; i < lines.Length; i++)
             {
-                vm.Commands.Add(new item { Desp = lines[i], cmd = lines[++i] });
+                vm.Commands.Add(new item { Desp = lines[i].TrimEnd(new char[] { '\r', '\n' }), cmd = lines[++i] });
             }
         }
 

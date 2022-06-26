@@ -22,7 +22,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border CornerRadius="5" MinHeight="64" BorderThickness="{ThemeResource ButtonBorderThemeThickness}" 
-                        Background="{ThemeResource FlyoutBackgroundThemeBrush}"
+                        
                         BorderBrush="{ThemeResource ButtonDisabledBorderThemeBrush}">
                         <Grid Padding="20 0">
                             <Grid.ColumnDefinitions>
@@ -30,7 +30,7 @@
                                 <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Height="24" VerticalAlignment="Center" FontSize="16" Text="{Binding Desp}">
+                            <TextBlock VerticalAlignment="Center" FontSize="16" Text="{Binding Desp}">
 
                             </TextBlock>
 

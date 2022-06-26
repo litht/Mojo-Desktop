@@ -17,6 +17,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.Gaming.XboxGameBar;
 using System.Threading.Tasks;
 using ICSharpCode.SharpZipLib.Zip;
+using Newtonsoft.Json.Linq;
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace Mojo_Desktop
@@ -59,7 +60,10 @@ namespace Mojo_Desktop
 
             });
         }
-
+        public async void Invoke(Action action, Windows.UI.Core.CoreDispatcherPriority Priority = Windows.UI.Core.CoreDispatcherPriority.Normal)
+        {
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(Priority, () => { action(); });
+        }
         public void SetCmd(string cmd)
         {
             commandInput.Text = cmd;
@@ -75,9 +79,39 @@ namespace Mojo_Desktop
             contentFrame.Navigate(pageType);
         }
 
+        private void ShowMsg(string title,string subtitle)
+        {
+            this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+            {
+                commandResultTip.Title = title;
+                commandResultTip.Subtitle = subtitle;
+                commandResultTip.IsOpen = true;
+            });
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string cmd = commandInput.Text;
+            Task.Run(async () =>
+            {
+                var resp=await GlobalProps.cilent.Invoke(cmd.Substring(1));
 
+                JObject jo = JObject.Parse(resp);
+
+                if ((int)jo["code"]==200)
+                {
+                    ShowMsg("执行结果", (string)jo["payload"]);
+
+
+                }
+                else if ((int)jo["code"] == 403)
+                {
+                    ShowMsg("登录过期", "请重新登录");
+
+                }
+
+
+            });
         }
     }
 }

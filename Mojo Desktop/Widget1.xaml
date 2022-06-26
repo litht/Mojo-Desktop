@@ -12,7 +12,9 @@
     <Grid>
         <Grid>
             <muxc:NavigationView x:Name="nvSample" SelectionChanged="nvSample_SelectionChanged"
+                                 IsSettingsVisible="False"
                                  IsBackButtonVisible="Collapsed"
+                                 
                                  >
                 <muxc:NavigationView.MenuItems>
                     <muxc:NavigationViewItem Icon="viewall" Content="常用指令" Tag="Custom" />
@@ -24,6 +26,11 @@
                     <muxc:NavigationViewItem Icon="viewall" Content="物品" Tag="Custom" />
                     <muxc:NavigationViewItem Icon="viewall" Content="Menu Item4" Tag="Custom" />
                 </muxc:NavigationView.MenuItems>
+
+                <muxc:NavigationView.FooterMenuItems>
+                    <muxc:NavigationViewItem Icon="setting" Content="设置" Tag="Settings" />
+
+                </muxc:NavigationView.FooterMenuItems>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -52,10 +59,10 @@
                     </Grid>
                     <muxc:TeachingTip x:Name="commandResultTip"
 	                    Title="执行结果"
+                                      IsLightDismissEnabled="True"
+
 	                    PreferredPlacement="Auto"
-	                    PlacementMargin="20"
-	                    IsLightDismissEnabled="True"
-	                    CloseButtonContent="关闭">
+	                    PlacementMargin="20">
                     </muxc:TeachingTip>
                 </Grid>
             </muxc:NavigationView>

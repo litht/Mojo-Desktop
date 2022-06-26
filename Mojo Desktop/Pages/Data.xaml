@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="Mojo_Desktop.Pages.Data"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mojo_Desktop.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Padding="10" >
+        <TextBlock FontSize="32" FontWeight="Bold" Text="属性编辑" Margin="0 0 0 20"></TextBlock>
+
+        <StackPanel>
+            <!--<ComboBox Header="选择一个角色" 
+                      HorizontalAlignment="Stretch" ItemsSource="{Binding Items}"
+                      SelectedValue="{Binding ID}" DisplayMemberPath="Name" SelectedValuePath="Id"
+                      SelectionChanged="ComboBox_SelectionChanged"
+                      />-->
+            <TextBlock Text="角色属性" Margin="0 0 0 10"></TextBlock>
+            <ListBox Height="250" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding Items}"
+                     SelectionChanged="ComboBox_SelectionChanged"
+                     
+                     SelectedValuePath="ArgName">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <!--<Run Text="{Binding ArgName}"/>-->
+                            <Run Text="{Binding Name}"/>
+                        </TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <muxc:NumberBox x:Name="NumberBoxSpinButtonPlacementExample"
+                Header="数值" 
+                SpinButtonPlacementMode="Compact"
+                            
+                Value="{Binding Value,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                />
+            <Border Height="32">
+                
+            </Border>
+
+            <muxc:RadioButtons x:Name="skillSel" SelectedIndex="0"  MaxColumns="3" Header="技能类型" SelectionChanged="skillSel_SelectionChanged">
+                <x:String>普通攻击</x:String>
+                <x:String>元素战技</x:String>
+                <x:String>元素爆发</x:String>
+            </muxc:RadioButtons>
+
+
+            <Slider Header="技能等级" Maximum="16" Minimum="1"
+                    Value="{Binding SValue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+        </StackPanel>
+    </StackPanel>
+</Page>

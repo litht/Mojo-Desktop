@@ -123,10 +123,25 @@
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
+            <ListView>
+                
+            </ListView>
+
+            <Grid Grid.Column="1" Padding="10">
+                <StackPanel>
+                    <ComboBox Header="词条类型" HorizontalAlignment="Stretch"></ComboBox>
+
+
+                    <ComboBox Header="词条名称" HorizontalAlignment="Stretch"></ComboBox>
+
+                    <muxc:NumberBox Minimum="1" Header="次数"/>
+
+                    <Button Margin="0 10" HorizontalAlignment="Stretch" Style="{StaticResource AccentButtonStyle}">添加</Button>
+                </StackPanel>
+            </Grid>
             
         </Grid>
         

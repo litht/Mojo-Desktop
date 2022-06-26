@@ -62,6 +62,7 @@ namespace Mojo_Desktop.Pages
         }
 
 
+
         private async Task LoadData()
         {
             var t = await GlobalProps.resourceFile.ReadAsync("reli_list.json");
@@ -69,8 +70,29 @@ namespace Mojo_Desktop.Pages
             vm.ArtData = JsonConvert.DeserializeObject<ObservableCollection<ReliList.Root>>(t);
 
             vm.MainAttr = await LoadFromFile("ArtifactMainAttribution.txt");
+            var subAttr = await LoadFromFile("ArtifactSubAttribution.txt");
+            vm.SubAttrs = new ObservableCollection<SubAttr>();
+            foreach (var item in subAttr)
+            {
+                vm.SubAttrs.Add(new SubAttr()
+                {
+                    id=item.Id,
+                    name=item.Name.Split('+')[0],
+                    value = item.Name
+
+                });
+            }
 
 
+        }
+
+        public class SubAttr
+        {
+            public string name { get; set; }
+
+            public string value { get; set; }
+
+            public string id { get; set; }
         }
 
         public class VM : ObservableObject
@@ -79,6 +101,16 @@ namespace Mojo_Desktop.Pages
             {
 
             }
+
+
+            private ObservableCollection<SubAttr> subAttrs;
+
+            public ObservableCollection<SubAttr> SubAttrs
+            {
+                get { return subAttrs; }
+                set { SetProperty(ref subAttrs, value); }
+            }
+
 
             private ObservableCollection<ReliList.Root> artData;
 

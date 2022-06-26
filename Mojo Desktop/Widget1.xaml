@@ -24,7 +24,7 @@
                     <muxc:NavigationViewItem Icon="viewall" Content="生物" Tag="Spawn" />
                     <muxc:NavigationViewItem Icon="viewall" Content="任务" Tag="Custom" />
                     <muxc:NavigationViewItem Icon="viewall" Content="物品" Tag="Custom" />
-                    <muxc:NavigationViewItem Icon="viewall" Content="Menu Item4" Tag="Custom" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="角色属性" Tag="Data" />
                 </muxc:NavigationView.MenuItems>
 
                 <muxc:NavigationView.FooterMenuItems>

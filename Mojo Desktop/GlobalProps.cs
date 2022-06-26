@@ -50,7 +50,14 @@ namespace Mojo_Desktop
 
         public delegate void setCMD(string cmd);
 
+
         public static setCMD SetCMD;
+
+
+        public delegate void setStats(bool s);
+
+        public static setStats SetStats;
+
 
         public const string Language = "zh-cn";
 

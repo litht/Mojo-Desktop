@@ -145,7 +145,7 @@ namespace Mojo_Desktop.Pages
                             GlobalProps.cilent.k2 = (string)jo["key"];
                             GlobalProps.cilent.authStatue = true;
 
-
+                            GlobalProps.SetStats(true);
                         }
                         else
                            

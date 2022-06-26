@@ -18,6 +18,7 @@ using Microsoft.Gaming.XboxGameBar;
 using System.Threading.Tasks;
 using ICSharpCode.SharpZipLib.Zip;
 using Newtonsoft.Json.Linq;
+using Windows.UI;
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace Mojo_Desktop
@@ -39,6 +40,7 @@ namespace Mojo_Desktop
 
             }
             GlobalProps.SetCMD = SetCmd;
+            GlobalProps.SetStats = SetState;
 
         }
 
@@ -89,6 +91,23 @@ namespace Mojo_Desktop
             });
         }
 
+        public void SetState(bool s=false)
+        {
+            this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+            {
+                if (!s)
+                {
+                    stateLED.Background = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
+
+                }
+                else
+                {
+                    stateLED.Background = new SolidColorBrush(Color.FromArgb(255, 0, 255, 0));
+
+                }
+            });
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string cmd = commandInput.Text;
@@ -106,6 +125,7 @@ namespace Mojo_Desktop
                 }
                 else if ((int)jo["code"] == 403)
                 {
+                    SetState();
                     ShowMsg("登录过期", "请重新登录");
 
                 }

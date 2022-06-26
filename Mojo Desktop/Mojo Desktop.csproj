@@ -137,6 +137,9 @@
     <Compile Include="Pages\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\GameItem.xaml.cs">
+      <DependentUpon>GameItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Spawn.xaml.cs">
       <DependentUpon>Spawn.xaml</DependentUpon>
     </Compile>
@@ -192,6 +195,10 @@
     <Page Include="Pages\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GameItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\Spawn.xaml">
       <Generator>MSBuild:Compile</Generator>

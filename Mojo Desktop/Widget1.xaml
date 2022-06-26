@@ -23,7 +23,7 @@
                     <muxc:NavigationViewItem Icon="viewall" Content="圣遗物" Tag="Art" />
                     <muxc:NavigationViewItem Icon="viewall" Content="生物" Tag="Spawn" />
                     <muxc:NavigationViewItem Icon="viewall" Content="任务" Tag="Custom" />
-                    <muxc:NavigationViewItem Icon="viewall" Content="物品" Tag="Custom" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="物品" Tag="GameItem" />
                     <muxc:NavigationViewItem Icon="viewall" Content="角色属性" Tag="Data" />
                 </muxc:NavigationView.MenuItems>
 

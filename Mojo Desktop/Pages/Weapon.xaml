@@ -51,7 +51,8 @@
                 SpinButtonPlacementMode="Compact"
                 Value="{Binding JL,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                 SmallChange="1"/>-->
-            <Slider Header="精炼等级" TickFrequency="1" Minimum="1" Maximum="5" TickPlacement="Outside" />
+            <Slider Header="精炼等级" 
+                    Value="{Binding JL,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TickFrequency="1" Minimum="1" Maximum="5" TickPlacement="Outside" />
         </StackPanel>
     </StackPanel>
 </Page>

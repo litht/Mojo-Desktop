@@ -1,4 +1,7 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Mojo_Desktop.DataTemplates;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -37,7 +40,7 @@ namespace Mojo_Desktop.Pages
 
         }
 
-        private async Task<ObservableCollection<GlobalProps.SimpleItem>> 
+        private async Task<ObservableCollection<GlobalProps.SimpleItem>>
             LoadFromFile(string type = "ArtifactCat.txt")
         {
             var t = await GlobalProps.resourceFile.ReadAsync(GlobalProps.Language + "/" + type);
@@ -59,39 +62,31 @@ namespace Mojo_Desktop.Pages
         }
 
 
-
         private async Task LoadData()
         {
-            vm.artTemplate = new VM.ArtTemplate
-            {
-                cats = await LoadFromFile(),
-                items = await LoadFromFile("Artifact.txt"),
-                main = await LoadFromFile("ArtifactMainAttribution.txt"),
-                sub = await LoadFromFile("ArtifactSubAttribution.txt")
-            };
+            var t = await GlobalProps.resourceFile.ReadAsync("reli_list.json");
 
-            vm.Cats = vm.artTemplate.cats;
-            vm.MainAttr = vm.artTemplate.main;
-            vm.SubAttr = vm.artTemplate.sub;
+            vm.ArtData = JsonConvert.DeserializeObject<ObservableCollection<ReliList.Root>>(t);
+
+            vm.MainAttr = await LoadFromFile("ArtifactMainAttribution.txt");
+
 
         }
 
         public class VM : ObservableObject
         {
-            public ArtTemplate artTemplate;
             public VM()
             {
 
             }
 
-            public class ArtTemplate
-            {
-                public ObservableCollection<GlobalProps.SimpleItem> cats;
-                public ObservableCollection<GlobalProps.SimpleItem> items;
-                public ObservableCollection<GlobalProps.SimpleItem> main;
-                public ObservableCollection<GlobalProps.SimpleItem> sub;
-            }
+            private ObservableCollection<ReliList.Root> artData;
 
+            public ObservableCollection<ReliList.Root> ArtData
+            {
+                get { return artData; }
+                set { SetProperty(ref artData, value); }
+            }
 
             public string ToCommand()
             {
@@ -122,26 +117,44 @@ namespace Mojo_Desktop.Pages
 
             public double ArtRating
             {
-                get { return artRating=1; }
-                set { SetProperty(ref artRating, value); }
+                get { return artRating; }
+                set { SetProperty(ref artRating, value); DoFilter(); }
             }
 
 
-            private ObservableCollection<GlobalProps.SimpleItem> _items;
-
-            public ObservableCollection<GlobalProps.SimpleItem> Cats
+            internal void DoFilter()
             {
-                get { return _items; }
-                set { SetProperty(ref _items, value); }
+                Items = new ObservableCollection<ReliList.Item>();
+
+                if (selectedArts==null)
+                {
+                    return;
+                }
+                if (selectedArts.ContainsKey(ArtRating.ToString()))
+                {
+
+                    var r = selectedArts[ArtRating.ToString()];
+                    r.ForEach((i) =>
+                    {
+                        Items.Add(i);
+
+                    });
+                }
+                else
+                {
+
+                }
             }
 
-            private ObservableCollection<GlobalProps.SimpleItem> items;
 
-            public ObservableCollection<GlobalProps.SimpleItem> Items
+            private ObservableCollection<ReliList.Item> items;
+
+            public ObservableCollection<ReliList.Item> Items
             {
                 get { return items; }
                 set { SetProperty(ref items, value); }
             }
+
 
             private ObservableCollection<GlobalProps.SimpleItem> _mainAttr;
 
@@ -158,6 +171,11 @@ namespace Mojo_Desktop.Pages
                 set { SetProperty(ref _subAttr, value); }
             }
 
+
+
+
+
+            public Dictionary<string, List<ReliList.Item>> selectedArts;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -171,23 +189,32 @@ namespace Mojo_Desktop.Pages
             vm.ID = cb.SelectedValue as string;
         }
 
+
         private void CatsSelected(object sender, SelectionChangedEventArgs e)
         {
             var cb = sender as ListBox;
-            var selectedValue = cb.SelectedValue as string;
-            var r = vm.artTemplate.items
-                .Where(item => 
-                {
-                    return item.Id.StartsWith(selectedValue) 
+            vm.selectedArts = cb.SelectedValue as
+                Dictionary<string, List<ReliList.Item>>;
 
-                    ; 
-                })
-                .ToList<GlobalProps.SimpleItem>();
-            vm.Items = new ObservableCollection<GlobalProps.SimpleItem>();
-            r.ForEach(p =>
-            {
-                vm.Items.Add(p);
-            });
+
+
+            vm.DoFilter();
+
+
+
+            //var r = vm.artTemplate.items
+            //    .Where(item => 
+            //    {
+            //        return item.Id.StartsWith(selectedValue) 
+
+            //        ; 
+            //    })
+            //    .ToList<GlobalProps.SimpleItem>();
+            //vm.Items = new ObservableCollection<GlobalProps.SimpleItem>();
+            //r.ForEach(p =>
+            //{
+            //    vm.Items.Add(p);
+            //});
 
         }
     }

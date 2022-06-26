@@ -28,15 +28,15 @@
                 </Grid.RowDefinitions>
                 <TextBlock Margin="10" Text="圣遗物类型"/>
                 <ListBox Grid.Row="1" SelectionMode="Single" 
-                         ItemsSource="{Binding Cats}" SelectedValue="{Binding ID}"
+                         ItemsSource="{Binding ArtData}" 
                      
                      SelectionChanged="CatsSelected"
-                     SelectedValuePath="Id">
+                     SelectedValuePath="contains">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock>
-                            <Run Text="{Binding Id}"/>
-                            <Run Text="{Binding Name}"/>
+                            <Run Text="{Binding id}"/>
+                            <Run Text="{Binding name}"/>
                             </TextBlock>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -49,15 +49,15 @@
                 </Grid.RowDefinitions>
                 <TextBlock Margin="10" Text="圣遗物"/>
                 <ListBox  Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding Items}" 
-                          SelectedValue="{Binding ID}"
+                          SelectedValue="{Binding id}"
                      
                      
-                     SelectedValuePath="Id">
+                     SelectedValuePath="id">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock>
-                            <Run Text="{Binding Id}"/>
-                            <Run Text="{Binding Name}"/>
+                            <Run Text="{Binding id}"/>
+                            <Run Text="{Binding name}"/>
                             </TextBlock>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -89,7 +89,7 @@
                     <muxc:RatingControl HorizontalAlignment="Left"
                         IsClearEnabled="False"
                         IsReadOnly="False"
-                        Value="{Binding ArtRating}"
+                        Value="{Binding ArtRating,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                         />
                 </StackPanel>
                 <Grid Grid.Row="2">

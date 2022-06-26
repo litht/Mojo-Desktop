@@ -122,6 +122,10 @@
     <Compile Include="Controls\ListCard.xaml.cs">
       <DependentUpon>ListCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataTemplates\AvatarList.cs" />
+    <Compile Include="DataTemplates\MonsterData.cs" />
+    <Compile Include="DataTemplates\ReliList.cs" />
+    <Compile Include="DataTemplates\WeaponList.cs" />
     <Compile Include="GlobalProps.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

@@ -18,15 +18,15 @@
                       SelectionChanged="ComboBox_SelectionChanged"
                       />-->
             <TextBlock Text="选择角色" Margin="0 0 0 10"></TextBlock>
-            <ListBox Height="300" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding Items}" SelectedValue="{Binding ID}"
+            <ListBox Height="300" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding Items}" SelectedValue="{Binding id}"
                      SelectionChanged="ComboBox_SelectionChanged"
                      
-                     SelectedValuePath="Id">
+                     SelectedValuePath="id">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>
-                            <Run Text="{Binding Id}"/>
-                            <Run Text="{Binding Name}"/>
+                            <Run Text="{Binding id}"/>
+                            <Run Text="{Binding name}"/>
                         </TextBlock>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -37,6 +37,20 @@
                             
                 Value="{Binding Value,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                 SmallChange="10"/>-->
+            <StackPanel Orientation="Horizontal">
+                <muxc:RadioButtons x:Name="BackgroundRadioButtons" SelectedIndex="0" MaxColumns="5" Header="按元素筛选" 
+                                   SelectionChanged="eleFilter">
+                    <x:String>无</x:String>
+                    <x:String>雷</x:String>
+                    <x:String>冰</x:String>
+                    <x:String>风</x:String>
+                    <x:String>水</x:String>
+                    <x:String>火</x:String>
+                    <x:String>岩</x:String>
+                    <x:String>草</x:String>
+                </muxc:RadioButtons>
+
+            </StackPanel>
             <Slider Header="角色等级" Maximum="90" Minimum="1"
                     Value="{Binding Value,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 

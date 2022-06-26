@@ -1,4 +1,7 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.UI.Xaml.Controls;
+using Mojo_Desktop.DataTemplates;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -39,21 +42,12 @@ namespace Mojo_Desktop.Pages
 
         private async Task LoadData()
         {
-            var t = await GlobalProps.resourceFile.ReadAsync(GlobalProps.Language + "/Avatar.txt");
+            var t = await GlobalProps.resourceFile.ReadAsync("avatar_list.json");
+
+            vm.AllAvatars = JsonConvert.DeserializeObject<ObservableCollection<AvatarList.Item>>(t);
+            vm.Items = vm.AllAvatars;
 
 
-            var lines = t.Split('\n');
-
-            vm.Items = new ObservableCollection<GlobalProps.SimpleItem>();
-
-            foreach (var line in lines)
-            {
-                var item = line.Split(':');
-
-                
-
-                vm.Items.Add(new GlobalProps.SimpleItem { Name = item[1].TrimEnd(new char[] { '\r', '\n' }), Id = item[0] });
-            }
         }
         public class VM : ObservableObject
         {
@@ -61,7 +55,7 @@ namespace Mojo_Desktop.Pages
             {
 
             }
-
+            public ObservableCollection<AvatarList.Item> AllAvatars { get; set; }
 
             public string ToCommand()
             {
@@ -79,7 +73,7 @@ namespace Mojo_Desktop.Pages
                 set { SetProperty(ref _id, value); ToCommand(); }
             }
 
-            private double _value=1;
+            private double _value = 1;
 
             public double Value
             {
@@ -90,9 +84,9 @@ namespace Mojo_Desktop.Pages
 
 
 
-            private ObservableCollection<GlobalProps.SimpleItem> _items;
+            private ObservableCollection<AvatarList.Item> _items;
 
-            public ObservableCollection<GlobalProps.SimpleItem> Items
+            public ObservableCollection<AvatarList.Item> Items
             {
                 get { return _items; }
                 set { SetProperty(ref _items, value); }
@@ -111,6 +105,58 @@ namespace Mojo_Desktop.Pages
         {
             var cb = sender as ListBox;
             vm.ID = cb.SelectedValue as string;
+        }
+
+        private void DoFilter(string ele)
+        {
+            var r = vm.AllAvatars
+                .Where(item =>
+                {
+                    return item.element == ele;
+
+                    ;
+                })
+                .ToList<AvatarList.Item>();
+            vm.Items = new ObservableCollection<AvatarList.Item>();
+            r.ForEach(p =>
+            {
+                vm.Items.Add(p);
+            });
+
+        }
+
+        private void eleFilter(object sender, SelectionChangedEventArgs e)
+        {
+            string ele = (sender as RadioButtons).SelectedItem as string;
+            switch (ele)
+            {
+                case "雷":
+                    DoFilter("Electric");
+                    break;
+                case "冰":
+                    DoFilter("Ice");
+                    break;
+                case "风":
+                    DoFilter("Wind");
+                    break;
+                case "水":
+                    DoFilter("Water");
+                    break;
+                case "火":
+                    DoFilter("Fire");
+                    break;
+                case "岩":
+                    DoFilter("Rock");
+                    break;
+                case "草":
+                    DoFilter("Grass");
+                    break;
+                default:
+                    vm.Items = vm.AllAvatars;
+                    break;
+
+
+            }
         }
     }
 }

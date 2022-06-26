@@ -6,11 +6,38 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
-    
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <controls:WebView2 x:Name="webview" Source="https://gc-mojoconsole.github.io/?lang=zh-cn&amp;device_type=pc"/>
+        <Grid>
+            <muxc:NavigationView x:Name="nvSample" SelectionChanged="nvSample_SelectionChanged"
+                                 IsBackButtonVisible="Collapsed"
+                                 >
+                <muxc:NavigationView.MenuItems>
+                    <muxc:NavigationViewItem Icon="viewall" Content="自定义指令" Tag="Custom" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="Menu Item2" Tag="Custom" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="Menu Item3" Tag="Custom" />
+                    <muxc:NavigationViewItem Icon="viewall" Content="Menu Item4" Tag="Custom" />
+                </muxc:NavigationView.MenuItems>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Frame x:Name="contentFrame"/>
+                    <TextBox Name="commandInput" Grid.Row="1" Margin="20 5">
+                        
+                    </TextBox>
+                    <muxc:TeachingTip x:Name="commandResultTip"
+	                    Title="执行结果"
+	                    PreferredPlacement="Auto"
+	                    PlacementMargin="20"
+	                    IsLightDismissEnabled="True"
+	                    CloseButtonContent="关闭">
+                    </muxc:TeachingTip>
+                </Grid>
+            </muxc:NavigationView>
+        </Grid>
     </Grid>
 </Page>

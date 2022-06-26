@@ -14,8 +14,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.Web.WebView2.Core;
 using Microsoft.UI.Xaml.Controls;
-using Mojo_Desktop.Utils;
-using static Mojo_Desktop.Utils.APIHandler;
+using Microsoft.Gaming.XboxGameBar;
+using System.Threading.Tasks;
+using ICSharpCode.SharpZipLib.Zip;
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace Mojo_Desktop
@@ -25,91 +26,53 @@ namespace Mojo_Desktop
     /// </summary>
     public sealed partial class Widget1 : Page
     {
-        ResourceHandler resourceHandler;
-        Routes routes = new Routes();
+
         public Widget1()
         {
+            RequestedTheme = ElementTheme.Dark;
             this.InitializeComponent();
 
-            webview.CoreWebView2Initialized += WebView2_CoreWebView2InitializationCompleted;
-        }
-
-        private void WebView2_CoreWebView2InitializationCompleted(object sender, CoreWebView2InitializedEventArgs e)
-        {
-
-            initWebView2();
-            //webview.Source = new Uri(internalUrl);
-            //webview.DefaultBackgroundColor = Color.Transparent;
-
-        }
-
-        void initWebView2()
-        {
-            //webview.CoreWebView2.Settings.IsPinchZoomEnabled = false;
-            //webview.CoreWebView2.Settings.IsSwipeNavigationEnabled = false;
-
-
-
-
-            webview.CoreWebView2.AddWebResourceRequestedFilter("*", CoreWebView2WebResourceContext.All);
-            APIHandler.env = webview.CoreWebView2.Environment;
-            resourceHandler = new ResourceHandler(webview.CoreWebView2.Environment);
-
-            webview.CoreWebView2.WebResourceRequested += WebView_WebResourceRequested;
-
-
-
-            //webview.CoreWebView2.NavigationStarting += NavigationStarting;
-
-
-
-            //internalApi = new InternalApi(resourceHandler);
-
-        }
-        private void WebView_WebResourceRequested(object sender, CoreWebView2WebResourceRequestedEventArgs e)
-        {
-            var host = "https://gc-mojoconsole.github.io/";
-            var nhost = "https://127.0.0.1:25565/";
-            if (e.Request.Uri.StartsWith(host))
+            if (GlobalProps.resourceFile == null)
             {
-                string path = e.Request.Uri.Substring(host.Length, e.Request.Uri.Length - host.Length);
-
-                if (path.StartsWith("mojoplus/api"))
-                {
-                    //request.Uri = $"https://{nhost}{path}";
-
-
-                    e.Response = routes.DoAction(path, e.Request);
-                    //return internalApi.ApiReqHandler(request);
-                }
+                LoadResData();
 
             }
+            GlobalProps.SetCMD = SetCmd;
 
-            e.GetDeferral().Complete();
         }
 
-        //public CoreWebView2WebResourceResponse handleRequest(CoreWebView2WebResourceRequest request)
-        //{
-        //    var host = "https://gc-mojoconsole.github.io/";
-        //    var nhost = "https://127.0.0.1:25565/";
-        //    if (request.Uri.StartsWith(host))
-        //    {
-        //        string path = request.Uri.Substring(host.Length, request.Uri.Length - host.Length);
 
-        //        if (path.StartsWith("mojoplus/api"))
-        //        {
-        //            //request.Uri = $"https://{nhost}{path}";
+        private void LoadResData()
+        {
+
+            var uri = new Uri("ms-appx:///Assets/Resources.zip");
+
+            Task.Run(async () =>
+            {
+                var sampleFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(uri);
+
+                var stream = await sampleFile.OpenStreamForReadAsync();
+                ZipFile file = new ZipFile(stream);
+                GlobalProps.resourceFile = new GlobalProps.ResourceFile(file);
+
+                //var r = await GlobalProps.resourceFile.ReadAsync("WeaponColor.txt");
+
+            });
+        }
+
+        public void SetCmd(string cmd)
+        {
+            commandInput.Text = cmd;
+        }
 
 
-        //            return routes.DoAction(path, request);
-        //            //return internalApi.ApiReqHandler(request);
-        //        }
-
-        //    }
-
-
-        //    throw new Exception();
-        //}
-
+        private void nvSample_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
+        {
+            var selectedItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.SelectedItem;
+            string selectedItemTag = ((string)selectedItem.Tag);
+            string pageName = "Mojo_Desktop.Pages." + selectedItemTag;
+            Type pageType = Type.GetType(pageName);
+            contentFrame.Navigate(pageType);
+        }
     }
 }

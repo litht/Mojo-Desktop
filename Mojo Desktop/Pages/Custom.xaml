@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="Mojo_Desktop.Pages.Custom"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mojo_Desktop.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    xmlns:ct="using:Mojo_Desktop.Controls"
+    Loaded="Page_Loaded"
+    x:Name="root"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <ListView Margin="0 20 0 0" SelectionMode="None" ItemsSource="{Binding Commands}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Margin" Value="0 2"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border CornerRadius="5" MinHeight="64" BorderThickness="{ThemeResource ButtonBorderThemeThickness}" 
+                        Background="{ThemeResource FlyoutBackgroundThemeBrush}"
+                        BorderBrush="{ThemeResource ButtonDisabledBorderThemeBrush}">
+                        <Grid Padding="20 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Height="24" VerticalAlignment="Center" FontSize="16" Text="{Binding Desp}">
+
+                            </TextBlock>
+
+                            <TextBox Grid.Column="1" Height="30" Margin="0 0 20 0">
+
+                            </TextBox>
+
+                            <Button Style="{StaticResource AccentButtonStyle}" 
+                                    Grid.Column="2" HorizontalAlignment="Stretch"
+                                    Command="{Binding ElementName=root,Path=DataContext.RunCMD}"
+                         CommandParameter="{Binding cmd}">
+                                执行
+                            </Button>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

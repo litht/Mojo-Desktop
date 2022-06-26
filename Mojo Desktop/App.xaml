@@ -6,6 +6,7 @@
     xmlns:controls="using:Microsoft.UI.Xaml.Controls">
 
     <Application.Resources>
-        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" >
+        </XamlControlsResources>
     </Application.Resources>
 </Application>

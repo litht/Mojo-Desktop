@@ -82,7 +82,7 @@ namespace Mojo_Desktop.Pages
                 }
                 else
                 {
-                    cmd = $"/spawn {Id} {Num} {Level}";
+                    cmd = $"/give {Id} {Num} {Level}";
 
                 }
 

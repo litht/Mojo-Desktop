@@ -72,8 +72,15 @@ namespace Mojo_Desktop.Pages
             vm.MainAttr = await LoadFromFile("ArtifactMainAttribution.txt");
             var subAttr = await LoadFromFile("ArtifactSubAttribution.txt");
             vm.SubAttrs = new ObservableCollection<SubAttr>();
+            vm.SubAttrName = new ObservableCollection<string>();
             foreach (var item in subAttr)
             {
+                if (!vm.SubAttrName.Contains(item.Name.Split('+')[0]))
+                {
+                    vm.SubAttrName.Add(item.Name.Split('+')[0]);
+                }
+
+
                 vm.SubAttrs.Add(new SubAttr()
                 {
                     id=item.Id,
@@ -103,12 +110,44 @@ namespace Mojo_Desktop.Pages
             }
 
 
+            private string selectedArt;
+
+            public string SelectedArt
+            {
+                get { return selectedArt; }
+                set { SetProperty(ref selectedArt, value);ToCommand(); }
+            }
+
+            private double selectedLevel;
+
+            public double SelectedLevel
+            {
+                get { return selectedLevel; }
+                set { SetProperty(ref selectedLevel, value);ToCommand(); }
+            }
+
+            private string _SelectedMainAttr;
+
+            public string SelectedMainAttr
+            {
+                get { return _SelectedMainAttr; }
+                set { SetProperty(ref _SelectedMainAttr, value); ToCommand(); }
+            }
+
             private ObservableCollection<SubAttr> subAttrs;
 
             public ObservableCollection<SubAttr> SubAttrs
             {
                 get { return subAttrs; }
                 set { SetProperty(ref subAttrs, value); }
+            }
+
+            private ObservableCollection<string> subAttrName;
+
+            public ObservableCollection<string> SubAttrName
+            {
+                get { return subAttrName; }
+                set { SetProperty(ref subAttrName, value); }
             }
 
 
@@ -122,19 +161,31 @@ namespace Mojo_Desktop.Pages
 
             public string ToCommand()
             {
-                var cmd = $"/givechar {ID} {Value}";
+                //var cmd = $"/givechar {ID} {Value}";
+                string buildedSubAttr="";
+
+                if (targetSubAttr!=null)
+                {
+
+                    foreach (var item in targetSubAttr)
+                    {
+                        buildedSubAttr += $" {item.id},{item.count}";
+                    }
+                }
+
+                var cmd = $"/giveart {SelectedArt} {SelectedMainAttr}{buildedSubAttr} {SelectedLevel}";
 
                 GlobalProps.SetCMD(cmd);
                 return cmd;
             }
 
-            private string _id;
+            //private string _id;
 
-            public string ID
-            {
-                get { return _id; }
-                set { SetProperty(ref _id, value); ToCommand(); }
-            }
+            //public string ID
+            //{
+            //    get { return _id; }
+            //    set { SetProperty(ref _id, value); ToCommand(); }
+            //}
 
             private double _value=1;
 
@@ -203,6 +254,75 @@ namespace Mojo_Desktop.Pages
                 set { SetProperty(ref _subAttr, value); }
             }
 
+            private ObservableCollection<GlobalProps.SimpleItem> subAttrValues;
+
+            public ObservableCollection<GlobalProps.SimpleItem> SubAttrValues
+            {
+                get { return subAttrValues; }
+                set { SetProperty(ref subAttrValues, value); }
+            }
+
+
+            private string selectedSubAttrName;
+
+            public string SelectedSubAttrName
+            {
+                get { return selectedSubAttrName; }
+                set 
+                { 
+                    SetProperty(ref selectedSubAttrName, value);
+
+                    SubAttrValues = new ObservableCollection<GlobalProps.SimpleItem>();
+                    foreach (var item in SubAttrs)
+                    {
+                        if (item.name==value)
+                        {
+                            SubAttrValues
+                                .Add(new GlobalProps.SimpleItem() { Id=item.id,Name=item.value });
+                        }
+                    }
+
+
+
+
+                }
+            }
+
+
+            private double _SubattrCount;
+
+            public double SubattrCount
+            {
+                get { return _SubattrCount; }
+                set { SetProperty(ref _SubattrCount, value); }
+            }
+
+
+
+            private GlobalProps.SimpleItem selectedSubAttrValue;
+
+            public GlobalProps.SimpleItem SelectedSubAttrValue
+            {
+                get { return selectedSubAttrValue; }
+                set { SetProperty(ref selectedSubAttrValue, value); }
+            }
+
+            public class SelectedSubAttr
+            {
+                public string id { get; set; }
+                public double count { get; set; }
+
+                public string name { get; set; }
+            }
+
+            private ObservableCollection<SelectedSubAttr> targetSubAttr;
+
+            public ObservableCollection<SelectedSubAttr> TargetSubAttr
+            {
+                get { return targetSubAttr; }
+                set { SetProperty(ref targetSubAttr, value); }
+            }
+
 
 
 
@@ -210,16 +330,7 @@ namespace Mojo_Desktop.Pages
             public Dictionary<string, List<ReliList.Item>> selectedArts;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var cb = sender as ListBox;
-            vm.ID = cb.SelectedValue as string;
-        }
 
 
         private void CatsSelected(object sender, SelectionChangedEventArgs e)
@@ -249,5 +360,29 @@ namespace Mojo_Desktop.Pages
             //});
 
         }
+
+        private void AddSubAttr(object sender, RoutedEventArgs e)
+        {
+
+            if (vm.TargetSubAttr==null)
+            {
+                vm.TargetSubAttr = new ObservableCollection<VM.SelectedSubAttr>();
+            }
+
+            if (vm.SelectedSubAttrName!=null&&vm.SelectedSubAttrValue!=null)
+            {
+                vm.TargetSubAttr.Add(new VM.SelectedSubAttr()
+                { count = vm.SubattrCount, id = vm.SelectedSubAttrValue.Id, name = vm.SelectedSubAttrValue.Name }); ;
+            }
+            vm.ToCommand();
+        }
+
+        private void ClearSubAttr(object sender, RoutedEventArgs e)
+        {
+            vm.TargetSubAttr = new ObservableCollection<VM.SelectedSubAttr>();
+            vm.ToCommand();
+
+        }
+
     }
 }

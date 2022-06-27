@@ -12,7 +12,8 @@
         <StackPanel HorizontalAlignment="Left">
             <TextBox x:Name="serverTB" Header="服务器地址" Width="240" />
             <TextBox x:Name="uidTB" Margin="0 10" Header="UID" Width="240"/>
-            <Button Margin="0 10" Style="{StaticResource AccentButtonStyle}" Click="Button_Click" Content="尝试认证"/>
+            <Button Margin="0 10" Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Stretch"
+                    Click="Button_Click" Content="尝试获取验证码"/>
             <muxc:TeachingTip x:Name="msgbox"
 	            Title="Change themes without hassle"
 	            Subtitle="It's easier than ever to see control samples in both light and dark theme!"
@@ -22,6 +23,9 @@
 	            ActionButtonContent="Toggle theme now"
 	            CloseButtonContent="取消">
             </muxc:TeachingTip>
+
+
+            <HyperlinkButton Content="开源地址" NavigateUri="https://github.com/gc-toolkit/Mojo-Desktop" />
         </StackPanel>
     </Grid>
 </Page>

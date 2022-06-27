@@ -124,12 +124,16 @@
     </Compile>
     <Compile Include="DataTemplates\AvatarList.cs" />
     <Compile Include="DataTemplates\MonsterData.cs" />
+    <Compile Include="DataTemplates\QuestList.cs" />
     <Compile Include="DataTemplates\ReliList.cs" />
     <Compile Include="DataTemplates\WeaponList.cs" />
     <Compile Include="GlobalProps.cs" />
     <Compile Include="Helper\Request.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quest.xaml.cs">
+      <DependentUpon>Quest.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Data.xaml.cs">
       <DependentUpon>Data.xaml</DependentUpon>
@@ -185,6 +189,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Quest.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

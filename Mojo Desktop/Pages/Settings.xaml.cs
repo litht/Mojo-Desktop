@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,8 +31,26 @@ namespace Mojo_Desktop.Pages
         public Settings()
         {
             this.InitializeComponent();
+            GlobalProps.ErrMsg = ErrMsg;
+
         }
 
+        public void ErrMsg(string s)
+        {
+
+            //ContentDialog messageDialog = new ContentDialog();
+            //messageDialog.Content = new TextBlock() { Text = s };
+            //messageDialog.ShowAsync();
+
+            this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+            {
+                msgbox.Title = "错误";
+                msgbox.ActionButtonContent = "确认";
+
+                msgbox.Content = new TextBlock() { Text = s };
+                msgbox.IsOpen = true;
+            });
+        }
 
 
         public async void Invoke(Action action, Windows.UI.Core.CoreDispatcherPriority Priority = Windows.UI.Core.CoreDispatcherPriority.Normal)
@@ -108,7 +127,7 @@ namespace Mojo_Desktop.Pages
                 }
                 catch (Exception ex)
                 {
-
+                    ErrMsg(ex.Message + ex.StackTrace);
                     throw;
                 }
 
@@ -127,6 +146,7 @@ namespace Mojo_Desktop.Pages
             Task.Run(async () =>
             {
                 var r = await GlobalProps.cilent.Auth();
+
 
 
                 try
@@ -151,7 +171,7 @@ namespace Mojo_Desktop.Pages
                            
                         {
                             //msgbox.ActionButtonContent = "确认";
-                            msgbox.Subtitle = "认证出错";
+                            msgbox.Subtitle = "认证出错" + jo.ToString(); ;
                             msgbox.ActionButtonContent = "确认";
 
                         }
@@ -172,6 +192,7 @@ namespace Mojo_Desktop.Pages
                 }
                 catch (Exception ex)
                 {
+                    ErrMsg(ex.Message + ex.StackTrace);
 
                     throw;
                 }

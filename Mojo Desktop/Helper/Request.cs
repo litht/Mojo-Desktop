@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mojo_Desktop;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -6,6 +7,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Windows.UI.Popups;
 
 namespace gpm
 {
@@ -134,7 +136,7 @@ namespace gpm
             }
             catch(Exception e)
             {
-                //MessageBox.Show(e.Message);
+                GlobalProps.ErrMsg($"{e.Message}\n{e.StackTrace}");
                 throw;
             }
             return responseBody;

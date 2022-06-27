@@ -42,15 +42,6 @@ namespace Mojo_Desktop
         /// <param name="e">有关启动请求和过程的详细信息。</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            UnhandledException += (s, eargs) =>
-            {
-                ContentDialog dialog = new ContentDialog();
-                dialog.Title = eargs.Exception.Message;
-                dialog.PrimaryButtonText = "确认";
-                dialog.DefaultButton = ContentDialogButton.Primary;
-                dialog.Content = new TextBlock() { Text=eargs.Exception.StackTrace };
-                dialog.ShowAsync();
-            };
 
             Frame rootFrame = Window.Current.Content as Frame;
 

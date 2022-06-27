@@ -58,6 +58,9 @@ namespace Mojo_Desktop
 
         public static setStats SetStats;
 
+        public delegate void ShowDialog(string s);
+
+        public static ShowDialog ErrMsg;
 
         public const string Language = "zh-cn";
 
@@ -94,6 +97,7 @@ namespace Mojo_Desktop
                 return r;
             }
 
+            
 
             public class apiReq
             {

@@ -20,11 +20,12 @@ namespace gpm
             HttpClientHandler handler = new HttpClientHandler() { UseCookies = true };
             handler.ServerCertificateCustomValidationCallback = (sender, certificate, chain, sslPolicyErrors) => { return true; };
             httpClient = new HttpClient(handler);
+            httpClient.DefaultRequestHeaders.ConnectionClose = true;
             httpClient.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36 Edg/99.0.1150.46");
             //httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer - a1Bp8zWGcxSEZ5RKcFlf5OmA8NiVzkJwvBA3jImwxTnLhY2Fyw - Cmosg6V7DU_DEw");
             //httpClient.DefaultRequestHeaders.Add("Cookie", User.Cookie);
 
-            httpClient.Timeout = new TimeSpan(0, 0, 0, 300); //超时时间             
+            httpClient.Timeout = new TimeSpan(0, 0, 0, 2); //超时时间             
         }
 
         public void ClearToken()

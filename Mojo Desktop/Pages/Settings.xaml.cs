@@ -47,6 +47,11 @@ namespace Mojo_Desktop.Pages
                 msgbox.Title = "错误";
                 msgbox.ActionButtonContent = "确认";
 
+
+                DataPackage dataPackage = new DataPackage();
+                dataPackage.SetText(s);
+                Clipboard.SetContent(dataPackage);
+
                 msgbox.Content = new TextBlock() { Text = s };
                 msgbox.IsOpen = true;
             });

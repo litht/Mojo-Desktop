@@ -11,7 +11,8 @@
     x:Name="root"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <StackPanel Padding="10" >
-        <TextBlock FontSize="32" FontWeight="Bold" Text="给自己发送武器" Margin="0 0 0 20"></TextBlock>
+        <TextBlock x:Uid="/WeaponPage/Title" 
+                   FontSize="32" FontWeight="Bold" Text="给自己发送武器" Margin="0 0 0 20"></TextBlock>
 
         <StackPanel>
             <!--<ComboBox Header="选择一个武器" 
@@ -19,7 +20,7 @@
                       HorizontalAlignment="Stretch" ItemsSource="{Binding Items}"
                       SelectedValue="{Binding ID}" DisplayMemberPath="Name" SelectedValuePath="Id"
                       />-->
-            <TextBlock Text="武器名称" Margin="0 0 0 10"/>
+            <TextBlock x:Uid="/WeaponPage/Name" Text="武器名称" Margin="0 0 0 10"/>
             <ListBox Height="250" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding Items}" SelectedValue="{Binding ID}"
                      SelectionChanged="cb_SelectionChanged"
                      
@@ -33,7 +34,7 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <muxc:NumberBox
+            <muxc:NumberBox x:Uid="/WeaponPage/Count"
                 Header="武器数量" Minimum="1"
                 SpinButtonPlacementMode="Compact"
                 Value="{Binding NUM,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
@@ -44,14 +45,14 @@
                 SpinButtonPlacementMode="Compact"
                 Value="{Binding Level,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                 SmallChange="10"/>-->
-            <Slider Header="等级" Maximum="90" Minimum="1"
+            <Slider Header="等级" x:Uid="/WeaponPage/Level" Maximum="90" Minimum="1"
                     Value="{Binding Level,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
             <!--<muxc:NumberBox
                 Header="精炼等级" Minimum="1" Maximum="5"
                 SpinButtonPlacementMode="Compact"
                 Value="{Binding JL,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                 SmallChange="1"/>-->
-            <Slider Header="精炼等级" 
+            <Slider Header="精炼等级" x:Uid="/WeaponPage/Level2"
                     Value="{Binding JL,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TickFrequency="1" Minimum="1" Maximum="5" TickPlacement="Outside" />
         </StackPanel>
     </StackPanel>

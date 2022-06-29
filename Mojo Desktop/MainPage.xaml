@@ -19,9 +19,9 @@
                 IsOpen="True"
                 IsClosable="False"
                 Severity="Warning"
-                Title="提示"
-                Message="下面的按钮仅供开发人员使用，如果你不知道它的用途，请不要动它" />
-            <Button HorizontalAlignment="Stretch" Padding="10" Margin="0 10" VerticalAlignment="Center"  Click="Button_Click">开发者选项</Button>
+                x:Uid="/MainPage/InfoBar"/>
+            <Button HorizontalAlignment="Stretch" Padding="10" Margin="0 10" VerticalAlignment="Center" 
+                    Click="Button_Click" x:Uid="/MainPage/DevBtn"></Button>
 
         </StackPanel>
 

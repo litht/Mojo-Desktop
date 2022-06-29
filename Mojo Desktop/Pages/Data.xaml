@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Padding="10" >
-        <TextBlock FontSize="32" FontWeight="Bold" Text="属性编辑" Margin="0 0 0 20"></TextBlock>
+        <TextBlock FontSize="32" x:Uid="/CharData/Title"
+                   FontWeight="Bold" Text="属性编辑" Margin="0 0 0 20"></TextBlock>
 
         <StackPanel>
             <!--<ComboBox Header="选择一个角色" 
@@ -17,7 +18,7 @@
                       SelectedValue="{Binding ID}" DisplayMemberPath="Name" SelectedValuePath="Id"
                       SelectionChanged="ComboBox_SelectionChanged"
                       />-->
-            <TextBlock Text="角色属性" Margin="0 0 0 10"></TextBlock>
+            <TextBlock Text="角色属性" x:Uid="/CharData/CharDataType." Margin="0 0 0 10"></TextBlock>
             <ListBox Height="250" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding Items}"
                      SelectionChanged="ComboBox_SelectionChanged"
                      
@@ -31,7 +32,7 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <muxc:NumberBox x:Name="NumberBoxSpinButtonPlacementExample"
+            <muxc:NumberBox x:Uid="/CharData/CharDataValue" x:Name="NumberBoxSpinButtonPlacementExample"
                 Header="数值" 
                 SpinButtonPlacementMode="Compact"
                             
@@ -41,14 +42,14 @@
                 
             </Border>
 
-            <muxc:RadioButtons x:Name="skillSel" SelectedIndex="0"  MaxColumns="3" Header="技能类型" SelectionChanged="skillSel_SelectionChanged">
+            <muxc:RadioButtons x:Uid="/CharData/SkillName" x:Name="skillSel" SelectedIndex="0"  MaxColumns="3" Header="技能类型"  SelectionChanged="skillSel_SelectionChanged">
                 <x:String>普通攻击</x:String>
                 <x:String>元素战技</x:String>
                 <x:String>元素爆发</x:String>
             </muxc:RadioButtons>
 
 
-            <Slider Header="技能等级" Maximum="16" Minimum="1"
+            <Slider Header="技能等级" x:Uid="/CharData/SkillValue" Maximum="16" Minimum="1"
                     Value="{Binding SValue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
         </StackPanel>

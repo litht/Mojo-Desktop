@@ -17,18 +17,18 @@
                                  
                                  >
                 <muxc:NavigationView.MenuItems>
-                    <muxc:NavigationViewItem Content="常用指令" Tag="Custom" />
-                    <muxc:NavigationViewItem Content="角色" Tag="Char" />
-                    <muxc:NavigationViewItem Content="武器" Tag="Weapon" />
-                    <muxc:NavigationViewItem Content="圣遗物" Tag="Art" />
-                    <muxc:NavigationViewItem Content="生物" Tag="Spawn" />
-                    <muxc:NavigationViewItem Content="任务" Tag="Quest" />
-                    <muxc:NavigationViewItem Content="物品" Tag="GameItem" />
-                    <muxc:NavigationViewItem Content="角色属性" Tag="Data" />
+                    <muxc:NavigationViewItem x:Uid="/NavigationViewItems/CommonCommands" Tag="Custom" />
+                    <muxc:NavigationViewItem x:Uid="/NavigationViewItems/AvatarCommands" Tag="Char" />
+                    <muxc:NavigationViewItem x:Uid="/NavigationViewItems/WeaponCommands" Tag="Weapon" />
+                    <muxc:NavigationViewItem x:Uid="/NavigationViewItems/ArtCommands" Tag="Art" />
+                    <muxc:NavigationViewItem x:Uid="/NavigationViewItems/SpawnCommands" Tag="Spawn" />
+                    <muxc:NavigationViewItem x:Uid="/NavigationViewItems/QuestCommands" Tag="Quest" />
+                    <muxc:NavigationViewItem x:Uid="/NavigationViewItems/GameItemCommands" Tag="GameItem" />
+                    <muxc:NavigationViewItem x:Uid="/NavigationViewItems/DataCommands"  Tag="Data" />
                 </muxc:NavigationView.MenuItems>
 
                 <muxc:NavigationView.FooterMenuItems>
-                    <muxc:NavigationViewItem Icon="setting" Content="设置" Tag="Settings" />
+                    <muxc:NavigationViewItem Icon="setting" x:Uid="/NavigationViewItems/SettingPage" Tag="Settings" />
 
                 </muxc:NavigationView.FooterMenuItems>
                 <Grid>
@@ -53,8 +53,8 @@
                         </TextBox>
 
                         <Button Grid.Column="2" Style="{StaticResource AccentButtonStyle}" Margin="10" Padding="30 5"
-                    Click="Button_Click">
-                            发送
+                    Click="Button_Click" x:Uid="/CommandInput/CommandInputSendBtn">
+                            
                         </Button>
                     </Grid>
                     <muxc:TeachingTip x:Name="commandResultTip"

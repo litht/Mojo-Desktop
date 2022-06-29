@@ -14,7 +14,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock FontSize="32" FontWeight="Bold" Text="圣遗物制造" Margin="0 0 0 0"></TextBlock>
+        <TextBlock FontSize="32" FontWeight="Bold" x:Uid="/ArtPage/PageTitle" Text="阳寿圣遗物制造" Margin="0 0 0 0"></TextBlock>
         <Grid Grid.Row="1" Height="300">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -26,7 +26,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock Margin="10" Text="圣遗物类型"/>
+                <TextBlock Margin="10" x:Uid="/ArtPage/PageTitle"/>
                 <ListBox Grid.Row="1" SelectionMode="Single" 
                          ItemsSource="{Binding ArtData}" 
                      
@@ -47,7 +47,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock Margin="10" Text="圣遗物"/>
+                <TextBlock Margin="10" x:Uid="/ArtPage/Art"/>
                 <ListBox  Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding Items}" 
                           SelectedValue="{Binding SelectedArt,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                         
@@ -74,7 +74,8 @@
                 <Slider Grid.Row="0"
                     Maximum="21" 
                     Minimum="1"
-                    Header="等级"
+                    x:Uid="/ArtPage/Level"
+                        
                     TickFrequency="1" 
                         Value="{Binding SelectedLevel,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                     TickPlacement="Outside" />
@@ -85,8 +86,8 @@
                 Value="{Binding Level,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                 SmallChange="10"/>-->
                 <StackPanel Grid.Row="1">
-                    
-                    <TextBlock Margin="0 5 0 10" Text="星级"/>
+
+                    <TextBlock Margin="0 5 0 10" x:Uid="/ArtPage/Rating" Text="星级"/>
                     <muxc:RatingControl HorizontalAlignment="Left"
                         IsClearEnabled="False"
                         IsReadOnly="False"
@@ -99,7 +100,7 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock Margin="0 10" Text="主词条"/>
+                    <TextBlock Margin="0 10" x:Uid="/ArtPage/MainAttr" Text="主词条"/>
                     <ListBox  Grid.Row="1" SelectionMode="Single" 
                               SelectedValue="{Binding SelectedMainAttr,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                               ItemsSource="{Binding MainAttr}" 
@@ -128,7 +129,8 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <ListView Header="副词条列表（请不要重复添加同一副词条）" Margin="0 10" ItemsSource="{Binding TargetSubAttr}">
+            <ListView x:Uid="/ArtPage/SubAttrList"
+                Header="副词条列表（请不要重复添加同一副词条）" Margin="0 10" ItemsSource="{Binding TargetSubAttr}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>
@@ -142,13 +144,14 @@
 
             <Grid Grid.Column="1" Padding="10">
                 <StackPanel>
-                    <ComboBox Header="词条类型" ItemsSource="{Binding SubAttrName}"
+                    <ComboBox Header="词条类型" x:Uid="/ArtPage/SubAttrName" ItemsSource="{Binding SubAttrName}"
                               HorizontalAlignment="Stretch"
                               SelectedValue="{Binding SelectedSubAttrName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                               ></ComboBox>
 
 
                     <ComboBox Header="词条名称" 
+                              x:Uid="/ArtPage/SubAttrValue"
                               ItemsSource="{Binding SubAttrValues}" 
                               SelectedItem="{Binding SelectedSubAttrValue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                               HorizontalAlignment="Stretch"
@@ -156,6 +159,7 @@
                               ></ComboBox>
 
                     <muxc:NumberBox Minimum="1" Header="次数"
+                                    x:Uid="/ArtPage/SubAttrCount"
                                     Value="{Binding SubattrCount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                     />
 
@@ -163,11 +167,13 @@
                             HorizontalAlignment="Stretch" 
                             Style="{StaticResource AccentButtonStyle}"
                             Click="AddSubAttr"
+                            x:Uid="/ArtPage/AddBtn"
                             >添加</Button>
 
                     <Button Margin="0 10" 
                             HorizontalAlignment="Stretch" 
                             Click="ClearSubAttr"
+                            x:Uid="/ArtPage/ClearAllBtn"
                             >清除所有</Button>
                 </StackPanel>
             </Grid>

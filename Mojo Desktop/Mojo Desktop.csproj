@@ -123,6 +123,12 @@
   <PropertyGroup>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>zh-CN</MultilingualFallbackLanguage>
+    <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
+    <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -268,11 +274,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Mojo Desktop_TemporaryKey.pfx" />
+    <PRIResource Include="Strings\zh-CN\WeaponPage.resw" />
+    <PRIResource Include="Strings\zh-CN\SpawnPage.resw" />
+    <PRIResource Include="Strings\zh-CN\SettingPage.resw" />
+    <PRIResource Include="Strings\zh-CN\QuestPage.resw" />
+    <PRIResource Include="Strings\zh-CN\GameItem.resw" />
+    <PRIResource Include="Strings\zh-CN\CharData.resw" />
+    <PRIResource Include="Strings\zh-CN\CharPage.resw" />
+    <PRIResource Include="Strings\zh-CN\ArtPage.resw" />
+    <PRIResource Include="Strings\zh-CN\MainPage.resw" />
+    <PRIResource Include="Strings\zh-Hans\NavigationViewItems.resw" />
+    <PRIResource Include="Strings\zh-Hans\CommandInput.resw" />
+    <PRIResource Include="Strings\zh-CN\CommandInput.resw" />
+    <PRIResource Include="Strings\zh-CN\NavigationViewItems.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\Mojo Desktop.zh-Hans.xlf" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.PriResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

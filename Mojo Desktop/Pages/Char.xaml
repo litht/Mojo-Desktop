@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Padding="10" >
-        <TextBlock FontSize="32" FontWeight="Bold" Text="给自己发送角色" Margin="0 0 0 20"></TextBlock>
+        <TextBlock FontSize="32" FontWeight="Bold" x:Uid="/CharPage/PageTitle"
+                   Text="给自己发送角色" Margin="0 0 0 20"></TextBlock>
 
         <StackPanel>
             <!--<ComboBox Header="选择一个角色" 
@@ -17,7 +18,7 @@
                       SelectedValue="{Binding ID}" DisplayMemberPath="Name" SelectedValuePath="Id"
                       SelectionChanged="ComboBox_SelectionChanged"
                       />-->
-            <TextBlock Text="选择角色" Margin="0 0 0 10"></TextBlock>
+            <TextBlock Text="选择角色" x:Uid="/CharPage/SelectCharacter" Margin="0 0 0 10"></TextBlock>
             <ListBox Height="300" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding Items}" SelectedValue="{Binding id}"
                      SelectionChanged="ComboBox_SelectionChanged"
                      
@@ -38,7 +39,8 @@
                 Value="{Binding Value,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                 SmallChange="10"/>-->
             <StackPanel Orientation="Horizontal">
-                <muxc:RadioButtons x:Name="BackgroundRadioButtons" SelectedIndex="0" MaxColumns="5" Header="按元素筛选" 
+                <muxc:RadioButtons x:Uid="/CharPage/SortByEle"
+                    x:Name="BackgroundRadioButtons" SelectedIndex="0" MaxColumns="5" Header="按元素筛选" 
                                    SelectionChanged="eleFilter">
                     <x:String>无</x:String>
                     <x:String>雷</x:String>
@@ -51,7 +53,7 @@
                 </muxc:RadioButtons>
 
             </StackPanel>
-            <Slider Header="角色等级" Maximum="90" Minimum="1"
+            <Slider Header="角色等级" x:Uid="/CharPage/Level" Maximum="90" Minimum="1"
                     Value="{Binding Value,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
         </StackPanel>

@@ -1,4 +1,5 @@
 ﻿using Mojo_Desktop;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -137,7 +138,7 @@ namespace gpm
             }
             catch(Exception e)
             {
-                GlobalProps.ErrMsg($"{e.Message}\n{e.StackTrace}");
+
                 throw;
             }
             return responseBody;

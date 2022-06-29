@@ -13,7 +13,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock FontSize="32" FontWeight="Bold" Text="生物生成" Margin="0 0 0 20"></TextBlock>
+        <TextBlock FontSize="32" x:Uid="/SpawnPage/Title" FontWeight="Bold" Text="生物生成" Margin="0 0 0 20"></TextBlock>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -26,7 +26,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <AutoSuggestBox PlaceholderText="按名称搜索" QueryIcon="Find"/>
+                <AutoSuggestBox x:Uid="/SettingPage/Search" PlaceholderText="按名称搜索" QueryIcon="Find"/>
                 <ListBox SelectionChanged="ComboBox_SelectionChanged" Grid.Row="1" ItemsSource="{Binding Monsters}" SelectedValue="{Binding Id}" SelectedValuePath="Id">
                     <!--<ListBoxItem>
                     测试
@@ -43,17 +43,17 @@
             </Grid>
             <Grid Grid.Column="1">
                 <StackPanel Margin="20 10">
-                    <TextBlock HorizontalAlignment="Center" Margin="10" FontSize="18" Text="类型选择"/>
+                    <TextBlock x:Uid="/SettingPage/TypeSel" HorizontalAlignment="Center" Margin="10" FontSize="18" Text="类型选择"/>
 
-                    <RadioButton Checked="RadioButton_Checked" Content="生物志"/>
-                    <RadioButton IsChecked="True" Checked="RadioButton_Checked_1" Content="讨伐对象"/>
-                    <RadioButton Content="NPC" Checked="RadioButton_Checked_2"/>
-                    <RadioButton Content="摆件" Checked="RadioButton_Checked_3"/>
+                    <RadioButton x:Uid="/SettingPage/s1" Checked="RadioButton_Checked" Content="生物志"/>
+                    <RadioButton x:Uid="/SettingPage/s2" IsChecked="True" Checked="RadioButton_Checked_1" Content="讨伐对象"/>
+                    <RadioButton x:Uid="/SettingPage/s3" Content="NPC" Checked="RadioButton_Checked_2"/>
+                    <RadioButton x:Uid="/SettingPage/s4" Content="摆件" Checked="RadioButton_Checked_3"/>
 
 
-                    <muxc:NumberBox Minimum="1" MinWidth="100" Header="数量" Value="{Binding Num,Mode=TwoWay}"></muxc:NumberBox>
-                    
-                    <muxc:NumberBox Maximum="210" Minimum="1" Header="等级" MinWidth="100" Value="{Binding Level,Mode=TwoWay}"></muxc:NumberBox>
+                    <muxc:NumberBox x:Uid="/SettingPage/Count" Minimum="1" MinWidth="100" Header="数量" Value="{Binding Num,Mode=TwoWay}"></muxc:NumberBox>
+
+                    <muxc:NumberBox x:Uid="/SettingPage/Level" Maximum="210" Minimum="1" Header="等级" MinWidth="100" Value="{Binding Level,Mode=TwoWay}"></muxc:NumberBox>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2">

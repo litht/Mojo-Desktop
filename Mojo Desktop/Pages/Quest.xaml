@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Padding="10" >
-        <TextBlock FontSize="32" FontWeight="Bold" Text="任务" Margin="0 0 0 20"></TextBlock>
+        <TextBlock x:Uid="/QuestPage/Title" FontSize="32" FontWeight="Bold" Text="任务" Margin="0 0 0 20"></TextBlock>
 
         <StackPanel>
             <!--<ComboBox Header="选择一个角色" 
@@ -18,7 +18,7 @@
                       SelectionChanged="ComboBox_SelectionChanged"
                       />-->
 
-            <ComboBox Header="任务选择" HorizontalAlignment="Stretch" ItemsSource="{Binding AllGroups}" 
+            <ComboBox x:Uid="/QuestPage/QuestSel" Header="任务选择" HorizontalAlignment="Stretch" ItemsSource="{Binding AllGroups}" 
                       SelectedValuePath="Items" SelectionChanged="ComboBox_SelectionChanged"
                       DisplayMemberPath="GroupName"
                       >
@@ -47,6 +47,7 @@
                 SmallChange="10"/>-->
             <StackPanel Orientation="Horizontal">
                 <ToggleSwitch Header="完成任务"
+                              x:Uid="/QuestPage/IsFinish"
                               IsOn="{Binding IsFinish,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                               >
                     

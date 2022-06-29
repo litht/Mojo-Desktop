@@ -13,7 +13,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock FontSize="32" FontWeight="Bold" Text="物品获取" Margin="0 0 0 20"></TextBlock>
+        <TextBlock FontSize="32" FontWeight="Bold" x:Uid="/GameItem/Title" Text="物品获取" Margin="0 0 0 20"></TextBlock>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -26,7 +26,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <AutoSuggestBox PlaceholderText="按名称搜索" QueryIcon="Find"/>
+                <AutoSuggestBox x:Uid="/GameItem/Search" PlaceholderText="按名称搜索" QueryIcon="Find"/>
                 <ListBox SelectionChanged="ComboBox_SelectionChanged" Grid.Row="1" ItemsSource="{Binding GameItems}" SelectedValue="{Binding Id}" SelectedValuePath="Id">
                     <!--<ListBoxItem>
                     测试
@@ -44,14 +44,14 @@
             <Grid Grid.Column="1">
                 <StackPanel Margin="20 10">
 
-                    <ToggleSwitch Header="采用掉落形式" IsOn="{Binding IsDrop,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                    <ToggleSwitch x:Uid="/GameItem/IsDrop" Header="采用掉落形式" IsOn="{Binding IsDrop,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                   >
                         
                     </ToggleSwitch>
 
-                    <muxc:NumberBox Minimum="1" MinWidth="100" Header="数量" Value="{Binding Num,Mode=TwoWay}"></muxc:NumberBox>
-                    
-                    <muxc:NumberBox Maximum="210" Minimum="1" Header="等级" MinWidth="100" Value="{Binding Level,Mode=TwoWay}"></muxc:NumberBox>
+                    <muxc:NumberBox x:Uid="/GameItem/Count" Minimum="1" MinWidth="100" Header="数量" Value="{Binding Num,Mode=TwoWay}"></muxc:NumberBox>
+
+                    <muxc:NumberBox x:Uid="/GameItem/Level" Maximum="210" Minimum="1" Header="等级" MinWidth="100" Value="{Binding Level,Mode=TwoWay}"></muxc:NumberBox>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2">

@@ -78,7 +78,7 @@ namespace Mojo_Desktop.Pages
                
 
 
-                var cmd = $"/give {ID} {NUM} {Level} {JL}";
+                var cmd = $"/give {ID} x{NUM} lv{Level} r{JL}";
 
                 GlobalProps.SetCMD(cmd);
                 return cmd;

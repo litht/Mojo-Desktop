@@ -173,7 +173,7 @@ namespace Mojo_Desktop.Pages
                     }
                 }
 
-                var cmd = $"/giveart {SelectedArt} {SelectedMainAttr}{buildedSubAttr} {SelectedLevel}";
+                var cmd = $"/give {SelectedArt} lv{SelectedLevel} {SelectedMainAttr}{buildedSubAttr}";
 
                 GlobalProps.SetCMD(cmd);
                 return cmd;

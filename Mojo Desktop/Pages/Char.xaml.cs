@@ -59,7 +59,7 @@ namespace Mojo_Desktop.Pages
 
             public string ToCommand()
             {
-                var cmd = $"/givechar {ID} {Value}";
+                var cmd = $"/give {ID} lv{Value}";
 
                 GlobalProps.SetCMD(cmd);
                 return cmd;

@@ -1,194 +1,194 @@
 [
   {
-    "Name": "当前生命值",
+    "Name": "Текущая HP",
     "ArgName": "hp",
     "Percent": false,
     "Tip": ""
   },
   {
-    "Name": "最大生命值",
+    "Name": "Макс. HP",
     "ArgName": "maxhp",
     "Percent": false,
     "Tip": ""
   },
   {
-    "Name": "当前攻击力",
+    "Name": "Текущая силы атаки",
     "ArgName": "atk",
     "Percent": false,
     "Tip": ""
   },
   {
-    "Name": "基础攻击力",
+    "Name": "Базовая атака",
     "ArgName": "atkb",
     "Percent": false,
-    "Tip": "不会重新计算攻击力，仅对buff类有效"
+    "Tip": "Похоже, это не пересчитывает силу атаки и может работать только с классами баффов."
   },
   {
-    "Name": "防御力",
+    "Name": "Защита",
     "ArgName": "def",
     "Percent": false,
-    "Tip": "似乎不起作用"
+    "Tip": "Это, кажется, не работает."
   },
   {
-    "Name": "元素精通",
+    "Name": "Мастерство стихий",
     "ArgName": "em",
     "Percent": false,
     "Tip": ""
   },
   {
-    "Name": "暴击率",
+    "Name": "Шанс крит. попадания",
     "ArgName": "crate",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "暴击伤害",
+    "Name": "Крит. урон",
     "ArgName": "cdmg",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "治疗加成",
+    "Name": "Бонус лечения",
     "ArgName": "heal",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "受治疗加成",
+    "Name": "Бонус получаемого лечения",
     "ArgName": "heali",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "元素充能效率",
+    "Name": "Восст. энергии",
     "ArgName": "er",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "冷却缩减",
+    "Name": "Снижение времени отката",
     "ArgName": "cdr",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "护盾强效",
+    "Name": "Прочность щита",
     "ArgName": "shield",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "火元素伤害加成",
+    "Name": "Бонус Пиро урона",
     "ArgName": "epyro",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "火元素抗性",
+    "Name": "Пиро сопротивление",
     "ArgName": "respyro",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "水元素伤害加成",
+    "Name": "Бонус Гидро урона",
     "ArgName": "ehydro",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "水元素抗性",
+    "Name": "Гидро сопротивление",
     "ArgName": "reshydro",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "草元素伤害加成",
+    "Name": "Бонус Дендро урона",
     "ArgName": "edendro",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "草元素抗性",
+    "Name": "Дендро сопротивление",
     "ArgName": "resdendro",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "雷元素伤害加成",
+    "Name": "Бонус Электро урона",
     "ArgName": "eelectro",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "雷元素抗性",
+    "Name": "Электро сопротивление",
     "ArgName": "reselectro",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "风元素伤害加成",
+    "Name": "Бонус Анемо урона",
     "ArgName": "eanemo",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "风元素抗性",
+    "Name": "Анемо сопротивление",
     "ArgName": "resanemo",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "冰元素伤害加成",
+    "Name": "Бонус Крио урона",
     "ArgName": "ecryo",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "冰元素抗性",
+    "Name": "Крио сопротивление",
     "ArgName": "rescryo",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "岩元素伤害加成",
+    "Name": "Бонус Гео урона",
     "ArgName": "egeo",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "岩元素抗性",
+    "Name": "Гео сопротивление",
     "ArgName": "resgeo",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "物理伤害加成",
+    "Name": "Бонус физ. урона",
     "ArgName": "ephys",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "物理抗性",
+    "Name": "Физ. сопротивление",
     "ArgName": "resphys",
     "Percent": true,
     "Tip": ""
   },
   {
-    "Name": "伤害提高",
+    "Name": "Бонус урона",
     "ArgName": "dmg",
     "Percent": true,
-    "Tip": "不同于伤害加成"
+    "Tip": ""
   },
   {
-    "Name": "受伤减免",
+    "Name": "Снижение урона",
     "ArgName": "resall",
     "Percent": true,
-    "Tip": "不同于抗性"
+    "Tip": ""
   },
   {
-    "Name": "忽略防御",
+    "Name": "Игнорируют защиты",
     "ArgName": "defi",
     "Percent": true,
-    "Tip": "似乎不起作用"
+    "Tip": "Это, кажется, не работает."
   }
 ]

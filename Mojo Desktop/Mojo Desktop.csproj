@@ -21,7 +21,7 @@
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <PackageCertificateThumbprint>046140F1B32215960E42F2A169138109FB2C4D3D</PackageCertificateThumbprint>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
-    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x64</AppxBundlePlatforms>
@@ -274,6 +274,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Mojo Desktop_TemporaryKey.pfx" />
+    <PRIResource Include="Strings\zh-Hans\WeaponPage.resw" />
+    <PRIResource Include="Strings\zh-Hans\SpawnPage.resw" />
+    <PRIResource Include="Strings\zh-Hans\SettingPage.resw" />
+    <PRIResource Include="Strings\zh-Hans\QuestPage.resw" />
+    <PRIResource Include="Strings\zh-Hans\MainPage.resw" />
+    <PRIResource Include="Strings\zh-Hans\GameItem.resw" />
+    <PRIResource Include="Strings\zh-Hans\CharPage.resw" />
+    <PRIResource Include="Strings\zh-Hans\CharData.resw" />
+    <PRIResource Include="Strings\zh-Hans\ArtPage.resw" />
+    <PRIResource Include="Strings\en\WeaponPage.resw" />
+    <PRIResource Include="Strings\en\SpawnPage.resw" />
+    <PRIResource Include="Strings\en\SettingPage.resw" />
+    <PRIResource Include="Strings\en\QuestPage.resw" />
+    <PRIResource Include="Strings\en\NavigationViewItems.resw" />
+    <PRIResource Include="Strings\en\MainPage.resw" />
+    <PRIResource Include="Strings\en\GameItem.resw" />
+    <PRIResource Include="Strings\en\CommandInput.resw" />
+    <PRIResource Include="Strings\en\CharPage.resw" />
+    <PRIResource Include="Strings\en\CharData.resw" />
+    <PRIResource Include="Strings\en\ArtPage.resw" />
+    <PRIResource Include="Strings\ru\WeaponPage.resw" />
+    <PRIResource Include="Strings\ru\SpawnPage.resw" />
+    <PRIResource Include="Strings\ru\SettingPage.resw" />
+    <PRIResource Include="Strings\ru\QuestPage.resw" />
+    <PRIResource Include="Strings\ru\NavigationViewItems.resw" />
+    <PRIResource Include="Strings\ru\MainPage.resw" />
+    <PRIResource Include="Strings\ru\GameItem.resw" />
+    <PRIResource Include="Strings\ru\CommandInput.resw" />
+    <PRIResource Include="Strings\ru\CharPage.resw" />
+    <PRIResource Include="Strings\ru\CharData.resw" />
+    <PRIResource Include="Strings\ru\ArtPage.resw" />
+    <PRIResource Include="Strings\qps-ploc\WeaponPage.resw" />
+    <PRIResource Include="Strings\qps-ploc\SpawnPage.resw" />
+    <PRIResource Include="Strings\qps-ploc\SettingPage.resw" />
+    <PRIResource Include="Strings\qps-ploc\QuestPage.resw" />
+    <PRIResource Include="Strings\qps-ploc\NavigationViewItems.resw" />
+    <PRIResource Include="Strings\qps-ploc\MainPage.resw" />
+    <PRIResource Include="Strings\qps-ploc\GameItem.resw" />
+    <PRIResource Include="Strings\qps-ploc\CommandInput.resw" />
+    <PRIResource Include="Strings\qps-ploc\CharPage.resw" />
+    <PRIResource Include="Strings\qps-ploc\CharData.resw" />
+    <PRIResource Include="Strings\qps-ploc\ArtPage.resw" />
     <PRIResource Include="Strings\zh-CN\WeaponPage.resw" />
     <PRIResource Include="Strings\zh-CN\SpawnPage.resw" />
     <PRIResource Include="Strings\zh-CN\SettingPage.resw" />
@@ -289,6 +331,9 @@
     <PRIResource Include="Strings\zh-CN\NavigationViewItems.resw" />
   </ItemGroup>
   <ItemGroup>
+    <XliffResource Include="MultilingualResources\Mojo Desktop.en.xlf" />
+    <XliffResource Include="MultilingualResources\Mojo Desktop.qps-ploc.xlf" />
+    <XliffResource Include="MultilingualResources\Mojo Desktop.ru.xlf" />
     <XliffResource Include="MultilingualResources\Mojo Desktop.zh-Hans.xlf" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

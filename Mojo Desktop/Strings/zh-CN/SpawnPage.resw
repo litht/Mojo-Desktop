@@ -123,13 +123,13 @@
   <data name="Level.Header" xml:space="preserve">
     <value>数量</value>
   </data>
-  <data name="s1.Header" xml:space="preserve">
+  <data name="s1.Content" xml:space="preserve">
     <value>生物志</value>
   </data>
-  <data name="s2.Header" xml:space="preserve">
+  <data name="s2.Content" xml:space="preserve">
     <value>讨伐对象</value>
   </data>
-  <data name="s3.Header" xml:space="preserve">
+  <data name="s3.Content" xml:space="preserve">
     <value>NPC</value>
   </data>
   <data name="s4.Header" xml:space="preserve">
@@ -141,7 +141,7 @@
   <data name="Title.Text" xml:space="preserve">
     <value>生物生成</value>
   </data>
-  <data name="TypeSel.Header" xml:space="preserve">
+  <data name="TypeSel.Text" xml:space="preserve">
     <value>类型选择</value>
   </data>
 </root>

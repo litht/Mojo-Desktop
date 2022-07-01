@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ArtCommands.Content" xml:space="preserve">
+    <value>Артефакты</value>
+  </data>
+  <data name="AvatarCommands.Content" xml:space="preserve">
+    <value>роль</value>
+  </data>
+  <data name="CommonCommands.Content" xml:space="preserve">
+    <value>Общие команды</value>
+  </data>
+  <data name="DataCommands.Content" xml:space="preserve">
+    <value>Атрибуты персонажа</value>
+  </data>
+  <data name="GameItemCommands.Content" xml:space="preserve">
+    <value>вещи</value>
+  </data>
+  <data name="QuestCommands.Content" xml:space="preserve">
+    <value>Квесты</value>
+  </data>
+  <data name="SettingPage.Content" xml:space="preserve">
+    <value>устанавливать</value>
+  </data>
+  <data name="SpawnCommands.Content" xml:space="preserve">
+    <value>Спавн</value>
+  </data>
+  <data name="WeaponCommands.Content" xml:space="preserve">
+    <value>Оружие</value>
+  </data>
+</root>

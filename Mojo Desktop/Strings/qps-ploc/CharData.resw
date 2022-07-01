@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CharDataType.Text" xml:space="preserve">
+    <value>[585A9][!!_角色属性_!!]</value>
+  </data>
+  <data name="CharDataValue.Header" xml:space="preserve">
+    <value>[905A7][!!_数值_!!]</value>
+  </data>
+  <data name="sE" xml:space="preserve">
+    <value>[49B11][!!_元素战技_!!]</value>
+  </data>
+  <data name="SkillName.Header" xml:space="preserve">
+    <value>[05656][!!_技能类型_!!]</value>
+  </data>
+  <data name="SkillValue.Header" xml:space="preserve">
+    <value>[B3F0F][!!_技能等级_!!]</value>
+  </data>
+  <data name="sQ" xml:space="preserve">
+    <value>[FF1AD][!!_元素爆发_!!]</value>
+  </data>
+  <data name="sS" xml:space="preserve">
+    <value>[7784E][!!_普通攻击_!!]</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>[DDADE][!!_属性编辑_!!]</value>
+  </data>
+</root>

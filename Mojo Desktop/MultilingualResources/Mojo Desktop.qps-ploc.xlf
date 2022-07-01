@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/COMMANDINPUT.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/COMMANDINPUT.RESW" datatype="resx">
+        <trans-unit id="CommandInputSendBtn.Content" translate="yes" xml:space="preserve">
+          <source>发送</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[FCAD7][!!_发送_!!]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/QUESTPAGE.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/QUESTPAGE.RESW" datatype="resx">
+        <trans-unit id="IsFinish.Header" translate="yes" xml:space="preserve">
+          <source>完成任务</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[F5F69][!!_完成任务_!!]</target>
+        </trans-unit>
+        <trans-unit id="QuestSel.Header" translate="yes" xml:space="preserve">
+          <source>任务选择</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[011B5][!!_任务选择_!!]</target>
+        </trans-unit>
+        <trans-unit id="Title.Text" translate="yes" xml:space="preserve">
+          <source>任务</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[DDADE][!!_任务_!!]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/MAINPAGE.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/MAINPAGE.RESW" datatype="resx">
+        <trans-unit id="DevBtn.Content" translate="yes" xml:space="preserve">
+          <source>开发者选项</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[A8400][!!_开发者选项_!!]</target>
+        </trans-unit>
+        <trans-unit id="InfoBar.Message" translate="yes" xml:space="preserve">
+          <source>下面的按钮仅供开发人员使用，如果你不知道它的用途，请不要动它</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[98758][!!_下面的按钮仅供开发人员使用，如果你不知道它的用途，请不要动它_!!]</target>
+        </trans-unit>
+        <trans-unit id="InfoBar.Title" translate="yes" xml:space="preserve">
+          <source>提示</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[0A2E4][!!_提示_!!]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/SETTINGPAGE.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/SETTINGPAGE.RESW" datatype="resx">
+        <trans-unit id="OpenSource.Content" translate="yes" xml:space="preserve">
+          <source>开源地址</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[99696][!!_开源地址_!!]</target>
+        </trans-unit>
+        <trans-unit id="ServerAddr.Header" translate="yes" xml:space="preserve">
+          <source>服务器地址</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[4798A][!!_服务器地址_!!]</target>
+        </trans-unit>
+        <trans-unit id="TryGetBtn.Content" translate="yes" xml:space="preserve">
+          <source>尝试获取验证码</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[EB566][!!_尝试获取验证码_!!]</target>
+        </trans-unit>
+        <trans-unit id="UID.Header" translate="yes" xml:space="preserve">
+          <source>UID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[3E844][!!_ÚÎĎ_!!]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/CHARDATA.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/CHARDATA.RESW" datatype="resx">
+        <trans-unit id="CharDataType.Text" translate="yes" xml:space="preserve">
+          <source>角色属性</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[585A9][!!_角色属性_!!]</target>
+        </trans-unit>
+        <trans-unit id="CharDataValue.Header" translate="yes" xml:space="preserve">
+          <source>数值</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[905A7][!!_数值_!!]</target>
+        </trans-unit>
+        <trans-unit id="sE" translate="yes" xml:space="preserve">
+          <source>元素战技</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[49B11][!!_元素战技_!!]</target>
+        </trans-unit>
+        <trans-unit id="SkillName.Header" translate="yes" xml:space="preserve">
+          <source>技能类型</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[05656][!!_技能类型_!!]</target>
+        </trans-unit>
+        <trans-unit id="SkillValue.Header" translate="yes" xml:space="preserve">
+          <source>技能等级</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[B3F0F][!!_技能等级_!!]</target>
+        </trans-unit>
+        <trans-unit id="sQ" translate="yes" xml:space="preserve">
+          <source>元素爆发</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[FF1AD][!!_元素爆发_!!]</target>
+        </trans-unit>
+        <trans-unit id="sS" translate="yes" xml:space="preserve">
+          <source>普通攻击</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[7784E][!!_普通攻击_!!]</target>
+        </trans-unit>
+        <trans-unit id="Title.Text" translate="yes" xml:space="preserve">
+          <source>属性编辑</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[DDADE][!!_属性编辑_!!]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/ARTPAGE.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/ARTPAGE.RESW" datatype="resx">
+        <trans-unit id="AddBtn.Content" translate="yes" xml:space="preserve">
+          <source>添加</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[01307][!!_添加_!!]</target>
+        </trans-unit>
+        <trans-unit id="Art.Text" translate="yes" xml:space="preserve">
+          <source>圣遗物</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[BE568][!!_圣遗物_!!]</target>
+        </trans-unit>
+        <trans-unit id="ArtCats.Text" translate="yes" xml:space="preserve">
+          <source>圣遗物类型</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[5D5FC][!!_圣遗物类型_!!]</target>
+        </trans-unit>
+        <trans-unit id="ClearAllBtn.Content" translate="yes" xml:space="preserve">
+          <source>清除所有</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[4D723][!!_清除所有_!!]</target>
+        </trans-unit>
+        <trans-unit id="Level.Header" translate="yes" xml:space="preserve">
+          <source>等级</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[A22A4][!!_等级_!!]</target>
+        </trans-unit>
+        <trans-unit id="MainAttr.Text" translate="yes" xml:space="preserve">
+          <source>主词条</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[D9CEB][!!_主词条_!!]</target>
+        </trans-unit>
+        <trans-unit id="PageTitle.Text" translate="yes" xml:space="preserve">
+          <source>圣遗物获取</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[AE2AC][!!_圣遗物获取_!!]</target>
+        </trans-unit>
+        <trans-unit id="Rating.Text" translate="yes" xml:space="preserve">
+          <source>星级</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[1AF8F][!!_星级_!!]</target>
+        </trans-unit>
+        <trans-unit id="SubAttrCount.Header" translate="yes" xml:space="preserve">
+          <source>次数</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[B94A4][!!_次数_!!]</target>
+        </trans-unit>
+        <trans-unit id="SubAttrName.Header" translate="yes" xml:space="preserve">
+          <source>词条类型</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[AC304][!!_词条类型_!!]</target>
+        </trans-unit>
+        <trans-unit id="SubAttrValue.Header" translate="yes" xml:space="preserve">
+          <source>词条名称</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[6A74E][!!_词条名称_!!]</target>
+        </trans-unit>
+        <trans-unit id="SubAttrList.Header" translate="yes" xml:space="preserve">
+          <source>副词条列表（请不要重复添加同一副词条）</source>
+          <target state="new">副词条列表（请不要重复添加同一副词条）</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/WEAPONPAGE.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/WEAPONPAGE.RESW" datatype="resx">
+        <trans-unit id="Count.Header" translate="yes" xml:space="preserve">
+          <source>武器数量</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[3D172][!!_武器数量_!!]</target>
+        </trans-unit>
+        <trans-unit id="Level.Header" translate="yes" xml:space="preserve">
+          <source>等级</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[A22A4][!!_等级_!!]</target>
+        </trans-unit>
+        <trans-unit id="Level1.Header" translate="yes" xml:space="preserve">
+          <source>精炼等级</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[EEE34][!!_精炼等级_!!]</target>
+        </trans-unit>
+        <trans-unit id="Name.Text" translate="yes" xml:space="preserve">
+          <source>武器名称</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[64E24][!!_武器名称_!!]</target>
+        </trans-unit>
+        <trans-unit id="Title.Text" translate="yes" xml:space="preserve">
+          <source>给自己发送武器</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[DDADE][!!_给自己发送武器_!!]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/NAVIGATIONVIEWITEMS.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/NAVIGATIONVIEWITEMS.RESW" datatype="resx">
+        <trans-unit id="ArtCommands.Content" translate="yes" xml:space="preserve">
+          <source>圣遗物</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[1A954][!!_圣遗物_!!]</target>
+        </trans-unit>
+        <trans-unit id="AvatarCommands.Content" translate="yes" xml:space="preserve">
+          <source>角色</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[1EE9C][!!_角色_!!]</target>
+        </trans-unit>
+        <trans-unit id="CommonCommands.Content" translate="yes" xml:space="preserve">
+          <source>常用命令</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[4E9D1][!!_常用命令_!!]</target>
+        </trans-unit>
+        <trans-unit id="DataCommands.Content" translate="yes" xml:space="preserve">
+          <source>角色属性</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[75F69][!!_角色属性_!!]</target>
+        </trans-unit>
+        <trans-unit id="GameItemCommands.Content" translate="yes" xml:space="preserve">
+          <source>物品</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[7F752][!!_物品_!!]</target>
+        </trans-unit>
+        <trans-unit id="QuestCommands.Content" translate="yes" xml:space="preserve">
+          <source>任务</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[859BC][!!_任务_!!]</target>
+        </trans-unit>
+        <trans-unit id="SettingPage.Content" translate="yes" xml:space="preserve">
+          <source>设置</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[37BDC][!!_设置_!!]</target>
+        </trans-unit>
+        <trans-unit id="SpawnCommands.Content" translate="yes" xml:space="preserve">
+          <source>怪物</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[9AB83][!!_怪物_!!]</target>
+        </trans-unit>
+        <trans-unit id="WeaponCommands.Content" translate="yes" xml:space="preserve">
+          <source>武器</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[54610][!!_武器_!!]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/GAMEITEM.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/GAMEITEM.RESW" datatype="resx">
+        <trans-unit id="Count.Header" translate="yes" xml:space="preserve">
+          <source>数量</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[3D172][!!_数量_!!]</target>
+        </trans-unit>
+        <trans-unit id="IsDrop.Header" translate="yes" xml:space="preserve">
+          <source>采用掉落形式</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[5C942][!!_采用掉落形式_!!]</target>
+        </trans-unit>
+        <trans-unit id="Level.Header" translate="yes" xml:space="preserve">
+          <source>等级</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[A22A4][!!_等级_!!]</target>
+        </trans-unit>
+        <trans-unit id="Search.PlaceholderText" translate="yes" xml:space="preserve">
+          <source>按名称搜索</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[27F47][!!_按名称搜索_!!]</target>
+        </trans-unit>
+        <trans-unit id="Title.Text" translate="yes" xml:space="preserve">
+          <source>物品获取</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[DDADE][!!_物品获取_!!]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/SPAWNPAGE.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/SPAWNPAGE.RESW" datatype="resx">
+        <trans-unit id="Count.Header" translate="yes" xml:space="preserve">
+          <source>等级</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[3D172][!!_等级_!!]</target>
+        </trans-unit>
+        <trans-unit id="Level.Header" translate="yes" xml:space="preserve">
+          <source>数量</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[A22A4][!!_数量_!!]</target>
+        </trans-unit>
+        <trans-unit id="s4.Header" translate="yes" xml:space="preserve">
+          <source>摆件</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[2B041][!!_摆件_!!]</target>
+        </trans-unit>
+        <trans-unit id="Search.PlaceholderText" translate="yes" xml:space="preserve">
+          <source>按名称搜索</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[27F47][!!_按名称搜索_!!]</target>
+        </trans-unit>
+        <trans-unit id="Title.Text" translate="yes" xml:space="preserve">
+          <source>生物生成</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[DDADE][!!_生物生成_!!]</target>
+        </trans-unit>
+        <trans-unit id="s1.Content" translate="yes" xml:space="preserve">
+          <source>生物志</source>
+          <target state="new">生物志</target>
+        </trans-unit>
+        <trans-unit id="s2.Content" translate="yes" xml:space="preserve">
+          <source>讨伐对象</source>
+          <target state="new">讨伐对象</target>
+        </trans-unit>
+        <trans-unit id="s3.Content" translate="yes" xml:space="preserve">
+          <source>NPC</source>
+          <target state="new">NPC</target>
+        </trans-unit>
+        <trans-unit id="TypeSel.Text" translate="yes" xml:space="preserve">
+          <source>类型选择</source>
+          <target state="new">类型选择</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="zh-CN" target-language="qps-ploc" original="MOJO DESKTOP/STRINGS/ZH-CN/CHARPAGE.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/CHARPAGE.RESW" datatype="resx">
+        <trans-unit id="Level.Header" translate="yes" xml:space="preserve">
+          <source>角色等级</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[A22A4][!!_角色等级_!!]</target>
+        </trans-unit>
+        <trans-unit id="PageTitle.Text" translate="yes" xml:space="preserve">
+          <source>给自己发送角色</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[AE2AC][!!_给自己发送角色_!!]</target>
+        </trans-unit>
+        <trans-unit id="SelectCharacter.Text" translate="yes" xml:space="preserve">
+          <source>选择角色</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[DBCB8][!!_选择角色_!!]</target>
+        </trans-unit>
+        <trans-unit id="SortByEle.Header" translate="yes" xml:space="preserve">
+          <source>按元素筛选</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[520B6][!!_按元素筛选_!!]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

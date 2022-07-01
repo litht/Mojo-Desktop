@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Count.Header" xml:space="preserve">
+    <value>[3D172][!!_数量_!!]</value>
+  </data>
+  <data name="IsDrop.Header" xml:space="preserve">
+    <value>[5C942][!!_采用掉落形式_!!]</value>
+  </data>
+  <data name="Level.Header" xml:space="preserve">
+    <value>[A22A4][!!_等级_!!]</value>
+  </data>
+  <data name="Search.PlaceholderText" xml:space="preserve">
+    <value>[27F47][!!_按名称搜索_!!]</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>[DDADE][!!_物品获取_!!]</value>
+  </data>
+</root>

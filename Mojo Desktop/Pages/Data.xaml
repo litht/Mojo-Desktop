@@ -18,7 +18,7 @@
                       SelectedValue="{Binding ID}" DisplayMemberPath="Name" SelectedValuePath="Id"
                       SelectionChanged="ComboBox_SelectionChanged"
                       />-->
-            <TextBlock Text="角色属性" x:Uid="/CharData/CharDataType." Margin="0 0 0 10"></TextBlock>
+            <TextBlock Text="角色属性" x:Uid="/CharData/CharDataType" Margin="0 0 0 10"></TextBlock>
             <ListBox Height="250" Grid.Row="1" SelectionMode="Single" ItemsSource="{Binding Items}"
                      SelectionChanged="ComboBox_SelectionChanged"
                      

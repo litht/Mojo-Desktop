@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddBtn.Content" xml:space="preserve">
+    <value>добавить</value>
+  </data>
+  <data name="Art.Text" xml:space="preserve">
+    <value>Артефакты</value>
+  </data>
+  <data name="ArtCats.Text" xml:space="preserve">
+    <value>Названия артефактов</value>
+  </data>
+  <data name="ClearAllBtn.Content" xml:space="preserve">
+    <value>Очистить все</value>
+  </data>
+  <data name="Level.Header" xml:space="preserve">
+    <value>уровень</value>
+  </data>
+  <data name="MainAttr.Text" xml:space="preserve">
+    <value>Основная статистика</value>
+  </data>
+  <data name="PageTitle.Text" xml:space="preserve">
+    <value>Выдать себе артефакт</value>
+  </data>
+  <data name="Rating.Text" xml:space="preserve">
+    <value>лвл</value>
+  </data>
+  <data name="SubAttrCount.Header" xml:space="preserve">
+    <value>раз</value>
+  </data>
+  <data name="SubAttrName.Header" xml:space="preserve">
+    <value>Тип ввода</value>
+  </data>
+  <data name="SubAttrValue.Header" xml:space="preserve">
+    <value>Имя записи</value>
+  </data>
+  <data name="SubAttrList.Header" xml:space="preserve">
+    <value>Список наречий (пожалуйста, не добавляйте одно и то же наречие повторно)</value>
+  </data>
+</root>

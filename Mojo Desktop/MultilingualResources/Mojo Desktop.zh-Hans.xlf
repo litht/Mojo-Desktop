@@ -129,7 +129,7 @@
           <source>星级</source>
           <target state="new">星级</target>
         </trans-unit>
-        <trans-unit id="SubAttrList.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SubAttrList.Header" translate="yes" xml:space="preserve">
           <source>副词条列表（请不要重复添加同一副词条）</source>
           <target state="new">副词条列表（请不要重复添加同一副词条）</target>
         </trans-unit>
@@ -287,37 +287,37 @@
           <source>按名称搜索</source>
           <target state="new">按名称搜索</target>
         </trans-unit>
-        <trans-unit id="String3" translate="yes" xml:space="preserve">
-          <source>类型选择</source>
-          <target state="new">类型选择</target>
-        </trans-unit>
-        <trans-unit id="String4" translate="yes" xml:space="preserve">
-          <source>生物志</source>
-          <target state="new">生物志</target>
-        </trans-unit>
-        <trans-unit id="String5" translate="yes" xml:space="preserve">
-          <source>讨伐对象</source>
-          <target state="new">讨伐对象</target>
-        </trans-unit>
-        <trans-unit id="String6" translate="yes" xml:space="preserve">
-          <source>NPC</source>
-          <target state="new">NPC</target>
-        </trans-unit>
-        <trans-unit id="String7" translate="yes" xml:space="preserve">
-          <source>摆件</source>
-          <target state="new">摆件</target>
-        </trans-unit>
-        <trans-unit id="String8" translate="yes" xml:space="preserve">
-          <source>数量</source>
-          <target state="new">数量</target>
-        </trans-unit>
-        <trans-unit id="String9" translate="yes" xml:space="preserve">
-          <source>等级</source>
-          <target state="new">等级</target>
-        </trans-unit>
         <trans-unit id="Title.Text" translate="yes" xml:space="preserve">
           <source>生物生成</source>
           <target state="new">生物生成</target>
+        </trans-unit>
+        <trans-unit id="Count.Header" translate="yes" xml:space="preserve">
+          <source>等级</source>
+          <target state="new">等级</target>
+        </trans-unit>
+        <trans-unit id="Level.Header" translate="yes" xml:space="preserve">
+          <source>数量</source>
+          <target state="new">数量</target>
+        </trans-unit>
+        <trans-unit id="s4.Header" translate="yes" xml:space="preserve">
+          <source>摆件</source>
+          <target state="new">摆件</target>
+        </trans-unit>
+        <trans-unit id="s1.Content" translate="yes" xml:space="preserve">
+          <source>生物志</source>
+          <target state="new">生物志</target>
+        </trans-unit>
+        <trans-unit id="s2.Content" translate="yes" xml:space="preserve">
+          <source>讨伐对象</source>
+          <target state="new">讨伐对象</target>
+        </trans-unit>
+        <trans-unit id="s3.Content" translate="yes" xml:space="preserve">
+          <source>NPC</source>
+          <target state="new">NPC</target>
+        </trans-unit>
+        <trans-unit id="TypeSel.Text" translate="yes" xml:space="preserve">
+          <source>类型选择</source>
+          <target state="new">类型选择</target>
         </trans-unit>
       </group>
     </body>
@@ -327,7 +327,28 @@
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.1.12.0" tool-company="Microsoft" />
     </header>
     <body>
-      <group id="MOJO DESKTOP/STRINGS/ZH-CN/WEAPONPAGE.RESW" datatype="resx" />
+      <group id="MOJO DESKTOP/STRINGS/ZH-CN/WEAPONPAGE.RESW" datatype="resx">
+        <trans-unit id="Count.Header" translate="yes" xml:space="preserve">
+          <source>武器数量</source>
+          <target state="new">武器数量</target>
+        </trans-unit>
+        <trans-unit id="Level.Header" translate="yes" xml:space="preserve">
+          <source>等级</source>
+          <target state="new">等级</target>
+        </trans-unit>
+        <trans-unit id="Level1.Header" translate="yes" xml:space="preserve">
+          <source>精炼等级</source>
+          <target state="new">精炼等级</target>
+        </trans-unit>
+        <trans-unit id="Name.Text" translate="yes" xml:space="preserve">
+          <source>武器名称</source>
+          <target state="new">武器名称</target>
+        </trans-unit>
+        <trans-unit id="Title.Text" translate="yes" xml:space="preserve">
+          <source>给自己发送武器</source>
+          <target state="new">给自己发送武器</target>
+        </trans-unit>
+      </group>
     </body>
   </file>
 </xliff>

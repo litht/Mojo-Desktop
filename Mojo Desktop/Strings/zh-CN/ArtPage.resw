@@ -144,7 +144,7 @@
   <data name="SubAttrCount.Header" xml:space="preserve">
     <value>次数</value>
   </data>
-  <data name="SubAttrList.Text" xml:space="preserve">
+  <data name="SubAttrList.Header" xml:space="preserve">
     <value>副词条列表（请不要重复添加同一副词条）</value>
   </data>
   <data name="SubAttrName.Header" xml:space="preserve">

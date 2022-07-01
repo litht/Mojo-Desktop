@@ -26,7 +26,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock Margin="10" x:Uid="/ArtPage/PageTitle"/>
+                <TextBlock Margin="10" x:Uid="/ArtPage/ArtCats"/>
                 <ListBox Grid.Row="1" SelectionMode="Single" 
                          ItemsSource="{Binding ArtData}" 
                      

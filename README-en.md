@@ -6,7 +6,7 @@
 > Allows you to execute Grasscutter commands inside Xbox Game Bar.
 
 
-EN|[中文](./README.md)
+EN | [中文](./README.md)
 
 ## Screenshots
 

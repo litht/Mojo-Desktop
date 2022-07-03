@@ -12,4 +12,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DevBtn.Content" xml:space="preserve">
+    <value>Developer Options</value>
+  </data>
+  <data name="InfoBar.Message" xml:space="preserve">
+    <value>The Option Below is for Developers Only, please ignore it unless you know what you are doing.</value>
+  </data>
+  <data name="InfoBar.Title" xml:space="preserve">
+    <value>Hint</value>
+  </data>
 </root>

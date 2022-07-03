@@ -19,6 +19,7 @@ using System.Threading.Tasks;
 using ICSharpCode.SharpZipLib.Zip;
 using Newtonsoft.Json.Linq;
 using Windows.UI;
+using Windows.System.UserProfile;
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace Mojo_Desktop
@@ -31,6 +32,24 @@ namespace Mojo_Desktop
 
         public Widget1()
         {
+            var lang= GlobalizationPreferences.Languages.FirstOrDefault();
+
+
+            if (lang.StartsWith("zh"))
+            {
+
+            }
+            else if (lang.StartsWith("en"))
+            {
+                GlobalProps.Language = "en-us";
+            }
+            else if (lang.StartsWith("ru"))
+            {
+                GlobalProps.Language = "ru-ru";
+
+            }
+
+
             RequestedTheme = ElementTheme.Dark;
             this.InitializeComponent();
 

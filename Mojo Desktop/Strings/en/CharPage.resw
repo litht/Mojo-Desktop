@@ -12,4 +12,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Level.Header" xml:space="preserve">
+    <value>Character Level</value>
+  </data>
+  <data name="PageTitle.Text" xml:space="preserve">
+    <value>Get Characters</value>
+  </data>
+  <data name="SelectCharacter.Text" xml:space="preserve">
+    <value>Select a Character</value>
+  </data>
+  <data name="SortByEle.Header" xml:space="preserve">
+    <value>Sort by Elements</value>
+  </data>
 </root>

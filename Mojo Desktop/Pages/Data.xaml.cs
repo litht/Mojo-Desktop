@@ -153,18 +153,16 @@ namespace Mojo_Desktop.Pages
 
         private void skillSel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string ele = (sender as RadioButtons).SelectedItem as string;
+            int ele = (sender as RadioButtons).SelectedIndex;
             switch (ele)
             {
-                case "元素爆发":
-                    vm.Skill = "q";
-
-                    break;
-                case "元素战技":
+                case 1:
                     vm.Skill = "e";
 
                     break;
-                case "风":
+                case 2:
+                    vm.Skill = "q";
+                    break;
                 default:
                     vm.Skill = "n";
                     break;

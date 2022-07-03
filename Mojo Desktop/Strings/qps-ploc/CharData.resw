@@ -18,20 +18,11 @@
   <data name="CharDataValue.Header" xml:space="preserve">
     <value>[905A7][!!_数值_!!]</value>
   </data>
-  <data name="sE" xml:space="preserve">
-    <value>[49B11][!!_元素战技_!!]</value>
-  </data>
   <data name="SkillName.Header" xml:space="preserve">
     <value>[05656][!!_技能类型_!!]</value>
   </data>
   <data name="SkillValue.Header" xml:space="preserve">
     <value>[B3F0F][!!_技能等级_!!]</value>
-  </data>
-  <data name="sQ" xml:space="preserve">
-    <value>[FF1AD][!!_元素爆发_!!]</value>
-  </data>
-  <data name="sS" xml:space="preserve">
-    <value>[7784E][!!_普通攻击_!!]</value>
   </data>
   <data name="Title.Text" xml:space="preserve">
     <value>[DDADE][!!_属性编辑_!!]</value>

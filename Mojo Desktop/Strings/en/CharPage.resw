@@ -24,4 +24,28 @@
   <data name="SortByEle.Header" xml:space="preserve">
     <value>Sort by Elements</value>
   </data>
+  <data name="Electric.Text" xml:space="preserve">
+    <value>Electro</value>
+  </data>
+  <data name="Fire.Text" xml:space="preserve">
+    <value>Pyro</value>
+  </data>
+  <data name="Grass.Text" xml:space="preserve">
+    <value>Dendro</value>
+  </data>
+  <data name="Ice.Text" xml:space="preserve">
+    <value>Cryo</value>
+  </data>
+  <data name="None.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Rock.Text" xml:space="preserve">
+    <value>Geo</value>
+  </data>
+  <data name="Water.Text" xml:space="preserve">
+    <value>Hydro</value>
+  </data>
+  <data name="Wind.Text" xml:space="preserve">
+    <value>Anemo</value>
+  </data>
 </root>

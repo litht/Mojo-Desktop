@@ -18,9 +18,6 @@
   <data name="Level.Header" xml:space="preserve">
     <value>Amount</value>
   </data>
-  <data name="s4.Header" xml:space="preserve">
-    <value>Furniture</value>
-  </data>
   <data name="Search.PlaceholderText" xml:space="preserve">
     <value>Search by name</value>
   </data>
@@ -38,5 +35,8 @@
   </data>
   <data name="TypeSel.Text" xml:space="preserve">
     <value>Select Type</value>
+  </data>
+  <data name="s4.Content" xml:space="preserve">
+    <value>Furnitures</value>
   </data>
 </root>

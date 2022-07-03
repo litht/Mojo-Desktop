@@ -10,7 +10,7 @@
   <Identity
     Name="67a4197d-da97-42f7-9bf5-b903ddd14915"
     Publisher="CN=SwetyCore"
-    Version="1.0.6.0" />
+    Version="1.0.8.0" />
 
   <mp:PhoneIdentity PhoneProductId="67a4197d-da97-42f7-9bf5-b903ddd14915" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

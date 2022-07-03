@@ -127,28 +127,28 @@ namespace Mojo_Desktop.Pages
 
         private void eleFilter(object sender, SelectionChangedEventArgs e)
         {
-            string ele = (sender as RadioButtons).SelectedItem as string;
+            int ele = (sender as RadioButtons).SelectedIndex;
             switch (ele)
             {
-                case "雷":
+                case 1:
                     DoFilter("Electric");
                     break;
-                case "冰":
+                case 2:
                     DoFilter("Ice");
                     break;
-                case "风":
+                case 3:
                     DoFilter("Wind");
                     break;
-                case "水":
+                case 4:
                     DoFilter("Water");
                     break;
-                case "火":
+                case 5:
                     DoFilter("Fire");
                     break;
-                case "岩":
+                case 6:
                     DoFilter("Rock");
                     break;
-                case "草":
+                case 7:
                     DoFilter("Grass");
                     break;
                 default:

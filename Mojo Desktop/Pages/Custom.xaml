@@ -42,7 +42,7 @@
                                     Grid.Column="2" HorizontalAlignment="Stretch"
                                     Command="{Binding ElementName=root,Path=DataContext.RunCMD}"
                          CommandParameter="{Binding cmd}">
-                                执行
+                                Go!
                             </Button>
                         </Grid>
                     </Border>

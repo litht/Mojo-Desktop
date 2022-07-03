@@ -12,4 +12,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddBtn.Content" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Art.Text" xml:space="preserve">
+    <value>Artifacts</value>
+  </data>
+  <data name="ArtCats.Text" xml:space="preserve">
+    <value>Artifacts Type</value>
+  </data>
+  <data name="ClearAllBtn.Content" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="Level.Header" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="MainAttr.Text" xml:space="preserve">
+    <value>Main Stats</value>
+  </data>
+  <data name="PageTitle.Text" xml:space="preserve">
+    <value>Get Artifacts</value>
+  </data>
+  <data name="Rating.Text" xml:space="preserve">
+    <value>Stars</value>
+  </data>
+  <data name="SubAttrCount.Header" xml:space="preserve">
+    <value>Amounts</value>
+  </data>
+  <data name="SubAttrName.Header" xml:space="preserve">
+    <value>Substats</value>
+  </data>
+  <data name="SubAttrValue.Header" xml:space="preserve">
+    <value>Substats Value</value>
+  </data>
+  <data name="SubAttrList.Header" xml:space="preserve">
+    <value>Substats list (Please do not add the same stats twice)</value>
+  </data>
 </root>

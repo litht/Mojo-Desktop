@@ -42,7 +42,7 @@ namespace Mojo_Desktop.Pages
 
         private async Task LoadData()
         {
-            var t = await GlobalProps.resourceFile.ReadAsync("quest_list.json");
+            var t = await GlobalProps.resourceFile.ReadAsync(GlobalProps.Language+"/quest_list.json");
 
             var r = JsonConvert.DeserializeObject
                 <Dictionary<string, List<List<string>>>>

@@ -65,7 +65,7 @@ namespace Mojo_Desktop.Pages
 
         private async Task LoadData()
         {
-            var t = await GlobalProps.resourceFile.ReadAsync("reli_list.json");
+            var t = await GlobalProps.resourceFile.ReadAsync(GlobalProps.Language+"/reli_list.json");
 
             vm.ArtData = JsonConvert.DeserializeObject<ObservableCollection<ReliList.Root>>(t);
 

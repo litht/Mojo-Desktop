@@ -62,7 +62,7 @@ namespace Mojo_Desktop
 
         public static ShowDialog ErrMsg;
 
-        public const string Language = "zh-cn";
+        public static string Language = "zh-cn";
 
         public class SimpleItem
         {

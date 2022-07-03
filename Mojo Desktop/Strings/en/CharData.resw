@@ -12,4 +12,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CharDataType.Text" xml:space="preserve">
+    <value>Character Elements</value>
+  </data>
+  <data name="CharDataValue.Header" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="sE" xml:space="preserve">
+    <value>Character Skill</value>
+  </data>
+  <data name="SkillName.Header" xml:space="preserve">
+    <value>Skill Types</value>
+  </data>
+  <data name="SkillValue.Header" xml:space="preserve">
+    <value>Skill Level</value>
+  </data>
+  <data name="sQ" xml:space="preserve">
+    <value>Elemental Burst</value>
+  </data>
+  <data name="sS" xml:space="preserve">
+    <value>Normal Attack</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>Edit Element</value>
+  </data>
 </root>

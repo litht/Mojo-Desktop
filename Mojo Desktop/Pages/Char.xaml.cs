@@ -42,7 +42,7 @@ namespace Mojo_Desktop.Pages
 
         private async Task LoadData()
         {
-            var t = await GlobalProps.resourceFile.ReadAsync("avatar_list.json");
+            var t = await GlobalProps.resourceFile.ReadAsync(GlobalProps.Language+"/avatar_list.json");
 
             vm.AllAvatars = JsonConvert.DeserializeObject<ObservableCollection<AvatarList.Item>>(t);
             vm.Items = vm.AllAvatars;

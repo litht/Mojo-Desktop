@@ -12,4 +12,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ArtCommands.Content" xml:space="preserve">
+    <value>Artifacts</value>
+  </data>
+  <data name="AvatarCommands.Content" xml:space="preserve">
+    <value>Characters</value>
+  </data>
+  <data name="CommonCommands.Content" xml:space="preserve">
+    <value>Most Used</value>
+  </data>
+  <data name="DataCommands.Content" xml:space="preserve">
+    <value>Character Stats</value>
+  </data>
+  <data name="GameItemCommands.Content" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="QuestCommands.Content" xml:space="preserve">
+    <value>Quests</value>
+  </data>
+  <data name="SettingPage.Content" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SpawnCommands.Content" xml:space="preserve">
+    <value>Monsters</value>
+  </data>
+  <data name="WeaponCommands.Content" xml:space="preserve">
+    <value>Weapons</value>
+  </data>
 </root>

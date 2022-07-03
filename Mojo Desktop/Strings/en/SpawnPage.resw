@@ -12,4 +12,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Count.Header" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="Level.Header" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="s4.Header" xml:space="preserve">
+    <value>Furniture</value>
+  </data>
+  <data name="Search.PlaceholderText" xml:space="preserve">
+    <value>Search by name</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>Spawn Entities</value>
+  </data>
+  <data name="s1.Content" xml:space="preserve">
+    <value>Wildlife</value>
+  </data>
+  <data name="s2.Content" xml:space="preserve">
+    <value>Monsters</value>
+  </data>
+  <data name="s3.Content" xml:space="preserve">
+    <value>NPC</value>
+  </data>
+  <data name="TypeSel.Text" xml:space="preserve">
+    <value>Select Type</value>
+  </data>
 </root>

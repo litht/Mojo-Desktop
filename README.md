@@ -1,8 +1,11 @@
 # Mojo-Desktop
 
+
 -----
 
 > 让你在 Xbox Game Bar 里快捷执行gc的命令/指令生成器。
+
+[EN](./README-en.md) | 中文
 
 ## 使用截图
 
@@ -24,3 +27,4 @@
 ## Bug反馈：
 
 请到 [Issues](https://github.com/gc-toolkit/Mojo-Desktop/issues) 里反馈。
+

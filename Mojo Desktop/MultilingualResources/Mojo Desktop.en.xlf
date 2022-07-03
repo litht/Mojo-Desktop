@@ -94,10 +94,6 @@
           <source>数值</source>
           <target state="translated">Value</target>
         </trans-unit>
-        <trans-unit id="sE" translate="yes" xml:space="preserve">
-          <source>元素战技</source>
-          <target state="translated">Character Skill</target>
-        </trans-unit>
         <trans-unit id="SkillName.Header" translate="yes" xml:space="preserve">
           <source>技能类型</source>
           <target state="translated">Skill Types</target>
@@ -106,17 +102,21 @@
           <source>技能等级</source>
           <target state="translated">Skill Level</target>
         </trans-unit>
-        <trans-unit id="sQ" translate="yes" xml:space="preserve">
-          <source>元素爆发</source>
-          <target state="translated">Elemental Burst</target>
-        </trans-unit>
-        <trans-unit id="sS" translate="yes" xml:space="preserve">
-          <source>普通攻击</source>
-          <target state="translated">Normal Attack</target>
-        </trans-unit>
         <trans-unit id="Title.Text" translate="yes" xml:space="preserve">
           <source>属性编辑</source>
           <target state="translated">Edit Element</target>
+        </trans-unit>
+        <trans-unit id="sE.Text" translate="yes" xml:space="preserve">
+          <source>元素战技</source>
+          <target state="translated">Elemental Skill</target>
+        </trans-unit>
+        <trans-unit id="sQ.Text" translate="yes" xml:space="preserve">
+          <source>元素爆发</source>
+          <target state="translated">Elemental Burst</target>
+        </trans-unit>
+        <trans-unit id="sS.Text" translate="yes" xml:space="preserve">
+          <source>普通攻击</source>
+          <target state="translated">Normal Attack</target>
         </trans-unit>
       </group>
     </body>
@@ -295,10 +295,6 @@
           <source>数量</source>
           <target state="translated">Amount</target>
         </trans-unit>
-        <trans-unit id="s4.Header" translate="yes" xml:space="preserve">
-          <source>摆件</source>
-          <target state="translated">Furniture</target>
-        </trans-unit>
         <trans-unit id="Search.PlaceholderText" translate="yes" xml:space="preserve">
           <source>按名称搜索</source>
           <target state="translated">Search by name</target>
@@ -322,6 +318,10 @@
         <trans-unit id="TypeSel.Text" translate="yes" xml:space="preserve">
           <source>类型选择</source>
           <target state="translated">Select Type</target>
+        </trans-unit>
+        <trans-unit id="s4.Content" translate="yes" xml:space="preserve">
+          <source>摆件</source>
+          <target state="translated">Furnitures</target>
         </trans-unit>
       </group>
     </body>
@@ -347,6 +347,38 @@
         <trans-unit id="SortByEle.Header" translate="yes" xml:space="preserve">
           <source>按元素筛选</source>
           <target state="translated">Sort by Elements</target>
+        </trans-unit>
+        <trans-unit id="Electric.Text" translate="yes" xml:space="preserve">
+          <source>雷</source>
+          <target state="translated">Electro</target>
+        </trans-unit>
+        <trans-unit id="Fire.Text" translate="yes" xml:space="preserve">
+          <source>火</source>
+          <target state="translated">Pyro</target>
+        </trans-unit>
+        <trans-unit id="Grass.Text" translate="yes" xml:space="preserve">
+          <source>草</source>
+          <target state="translated">Dendro</target>
+        </trans-unit>
+        <trans-unit id="Ice.Text" translate="yes" xml:space="preserve">
+          <source>冰</source>
+          <target state="translated">Cryo</target>
+        </trans-unit>
+        <trans-unit id="None.Text" translate="yes" xml:space="preserve">
+          <source>无</source>
+          <target state="translated">None</target>
+        </trans-unit>
+        <trans-unit id="Rock.Text" translate="yes" xml:space="preserve">
+          <source>岩</source>
+          <target state="translated">Geo</target>
+        </trans-unit>
+        <trans-unit id="Water.Text" translate="yes" xml:space="preserve">
+          <source>水</source>
+          <target state="translated">Hydro</target>
+        </trans-unit>
+        <trans-unit id="Wind.Text" translate="yes" xml:space="preserve">
+          <source>风</source>
+          <target state="translated">Anemo</target>
         </trans-unit>
       </group>
     </body>

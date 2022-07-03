@@ -25,7 +25,7 @@
             </muxc:TeachingTip>
 
 
-            <HyperlinkButton x:Uid="OpenSource" Content="开源地址" NavigateUri="https://github.com/gc-toolkit/Mojo-Desktop" />
+            <HyperlinkButton x:Uid="/SettingPage/OpenSource" Content="开源地址" NavigateUri="https://github.com/gc-toolkit/Mojo-Desktop" />
         </StackPanel>
     </Grid>
 </Page>

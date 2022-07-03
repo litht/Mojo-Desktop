@@ -132,7 +132,7 @@
   <data name="s3.Content" xml:space="preserve">
     <value>NPC</value>
   </data>
-  <data name="s4.Header" xml:space="preserve">
+  <data name="s4.Content" xml:space="preserve">
     <value>摆件</value>
   </data>
   <data name="Search.PlaceholderText" xml:space="preserve">

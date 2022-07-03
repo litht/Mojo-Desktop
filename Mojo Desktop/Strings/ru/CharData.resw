@@ -18,20 +18,11 @@
   <data name="CharDataValue.Header" xml:space="preserve">
     <value>значение</value>
   </data>
-  <data name="sE" xml:space="preserve">
-    <value>Элементарные боевые навыки</value>
-  </data>
   <data name="SkillName.Header" xml:space="preserve">
     <value>Типы навыков</value>
   </data>
   <data name="SkillValue.Header" xml:space="preserve">
     <value>Уровень квалификации</value>
-  </data>
-  <data name="sQ" xml:space="preserve">
-    <value>Стихийная вспышка</value>
-  </data>
-  <data name="sS" xml:space="preserve">
-    <value>Обычная атака</value>
   </data>
   <data name="Title.Text" xml:space="preserve">
     <value>Редактирование атрибутов</value>

@@ -42,14 +42,16 @@
                 <muxc:RadioButtons x:Uid="/CharPage/SortByEle"
                     x:Name="BackgroundRadioButtons" SelectedIndex="0" MaxColumns="5" Header="按元素筛选" 
                                    SelectionChanged="eleFilter">
-                    <x:String>无</x:String>
-                    <x:String>雷</x:String>
-                    <x:String>冰</x:String>
-                    <x:String>风</x:String>
-                    <x:String>水</x:String>
-                    <x:String>火</x:String>
-                    <x:String>岩</x:String>
-                    <x:String>草</x:String>
+                    <muxc:RadioButtons.Items>
+                        <TextBlock x:Uid="/CharPage/None"/>
+                        <TextBlock x:Uid="/CharPage/Electric"/>
+                        <TextBlock x:Uid="/CharPage/Ice"/>
+                        <TextBlock x:Uid="/CharPage/Wind"/>
+                        <TextBlock x:Uid="/CharPage/Water"/>
+                        <TextBlock x:Uid="/CharPage/Fire"/>
+                        <TextBlock x:Uid="/CharPage/Rock"/>
+                        <TextBlock x:Uid="/CharPage/Grass"/>
+                    </muxc:RadioButtons.Items>
                 </muxc:RadioButtons>
 
             </StackPanel>

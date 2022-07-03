@@ -18,9 +18,6 @@
   <data name="Level.Header" xml:space="preserve">
     <value>[A22A4][!!_数量_!!]</value>
   </data>
-  <data name="s4.Header" xml:space="preserve">
-    <value>[2B041][!!_摆件_!!]</value>
-  </data>
   <data name="Search.PlaceholderText" xml:space="preserve">
     <value>[27F47][!!_按名称搜索_!!]</value>
   </data>

@@ -10,7 +10,7 @@ EN | [中文](./README.md)
 
 ## Screenshots
 
-![](Images/preview-en.jpg)
+![](Images/preview-en.png)
 
 ## Usage
 

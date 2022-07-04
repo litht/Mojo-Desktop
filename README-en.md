@@ -19,7 +19,7 @@ EN | [中文](./README.md)
 
 1. Download the package [here](https://github.com/gc-mojoconsole/gc-mojoconsole-backend/releases/tag/latest).
 2. Unzip the files
-   + Execute Mojo Desktop_[Version]_x64.cer and install the Security Certificate (must)
+   + Execute Mojo Desktop_[Version]_x64.cer and install the Security Certificate (required)
    + Execute Mojo Desktop_[Version]_x64.msixbundle and install the app.
 3. Run Grasscutter as usual
 4. Open Xbox Game Bar with `Win + G`
@@ -28,4 +28,4 @@ EN | [中文](./README.md)
 
 ## Bug Reports：
 
-Please report them at [Issues](https://github.com/gc-toolkit/Mojo-Desktop/issues) issues Tab.
+Please report them at the [issues](https://github.com/gc-toolkit/Mojo-Desktop/issues) tab.

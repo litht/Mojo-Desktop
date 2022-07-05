@@ -26,6 +26,6 @@ EN | [中文](./README.md)
 5. Locate and run `MojoDesktop` at plugins session
 
 
-## Bug Reports：
+## Issues/Bugs
 
 Please report them at the [issues](https://github.com/gc-toolkit/Mojo-Desktop/issues) tab.
